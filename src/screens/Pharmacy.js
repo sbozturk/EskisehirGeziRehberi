@@ -38,7 +38,11 @@ const App = StackNavigator({
   Pharmacy: { screen: Pharmacy },
   Odunpazari: { screen: Odunpazari },
   Tepebasi: { screen: Tepebasi },
-});
+},
+{
+   headerMode: 'none'
+}
+);
 
 const columnStyle = StyleSheet.create({
   container: {
