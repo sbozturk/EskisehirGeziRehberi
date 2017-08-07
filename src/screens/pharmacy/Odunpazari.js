@@ -60,7 +60,7 @@ class Odunpazari extends Component {
             <View style={styles.container}>
                 <Text style={styles.title}>{pharmancy.name}</Text>
                 <Text>{pharmancy.address}</Text>
-                <Text>{pharmancy.name.telephone}</Text>
+                <Text>{pharmancy.telephone}</Text>
             </View>
         );
     }
