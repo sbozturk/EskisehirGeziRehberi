@@ -90,7 +90,7 @@ const rowStyle = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 20,
+    backgroundColor: '#fff'
   },
 });
 
@@ -98,7 +98,8 @@ const columnStyle = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent:'center'
+    justifyContent:'center',
+
   },
 });
 
@@ -109,6 +110,7 @@ const buttonStyle = StyleSheet.create({
     height: '30%',
     width: '90%',
     marginBottom: 20,
+    marginTop: 30,
     alignItems: 'center',
     justifyContent:'center',
     borderRadius: 100/10,
@@ -119,6 +121,7 @@ const buttonStyle = StyleSheet.create({
     height: '30%',
     width: '90%',
     marginBottom: 20,
+    marginTop: 30,
     alignItems: 'center',
     justifyContent:'center',
     borderRadius: 100/10,
