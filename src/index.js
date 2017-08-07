@@ -7,12 +7,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import Pharmacy from './Pharmacy';
-import PhoneNumbers from './PhoneNumbers';
-import Tramvay from './Tramvay';
-import Travel from './Travel';
-import Weather from './Weather';
-import News from './News';
+import Pharmacy from './screens/Pharmacy';
+import PhoneNumbers from './screens/PhoneNumbers';
+import Tramvay from './screens/Tramvay';
+import Travel from './screens/Travel';
+import Weather from './screens/Weather';
+import News from './screens/News';
 
 const HomeScreen = React.createClass({
   navigationOptions: {
@@ -22,50 +22,59 @@ const HomeScreen = React.createClass({
   render() {
     const { navigate } = this.props.navigation;
 
-    return <View style={styles.container}>
+    return ( <View style={rowStyle.container}>
+      <View style={columnStyle.container}>
       <TouchableOpacity
-        style={styles.button}
+        style={buttonStyle.buttonWeather}
         onPress={() => navigate('Weather')}
       >
-        <Text>Hava Durumu</Text>
+        <Text style={buttonStyle.buttonText}>Hava Durumu</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigate('Travel')}
-      >
-        <Text>Gezilecek Yerler</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
+        style={buttonStyle.buttonTramvay}
         onPress={() => navigate('Tramvay')}
       >
-        <Text>Tramvay</Text>
+        <Text style={buttonStyle.buttonText}>Tramvay</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigate('News')}
-      >
-        <Text>Haberler</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
+        style={buttonStyle.buttonPharmacy}
         onPress={() => navigate('Pharmacy')}
       >
-        <Text>Nöbetçi Eczaneler</Text>
+        <Text style={buttonStyle.buttonText}>Nöbetçi Eczaneler</Text>
       </TouchableOpacity>
+    </View>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigate('PhoneNumbers')}
-      >
-        <Text>Aci Numaralar</Text>
-      </TouchableOpacity>
+    <View style={columnStyle.container}>
+    <TouchableOpacity
+      style={buttonStyle.buttonTravel}
+      onPress={() => navigate('Travel')}
+    >
+      <Text style={buttonStyle.buttonText}>Gezilecek Yerler</Text>
+    </TouchableOpacity>
 
-    </View>;
+    <TouchableOpacity
+      style={buttonStyle.buttonNews}
+      onPress={() => navigate('News')}
+    >
+      <Text style={buttonStyle.buttonText}>Haberler</Text>
+    </TouchableOpacity>
+
+    <TouchableOpacity
+      style={buttonStyle.buttonPhoneNumbers}
+      onPress={() => navigate('PhoneNumbers')}
+    >
+      <Text style={buttonStyle.buttonText}>Acil Numaralar</Text>
+    </TouchableOpacity>
+
+  </View>
+
+      </View>
+
+
+
+  );
   },
 });
 
@@ -81,13 +90,87 @@ const App = StackNavigator({
 
 export default App;
 
-const styles = StyleSheet.create({
+const rowStyle = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30,
+    flexDirection: 'row',
     alignItems: 'center',
   },
-  button: {
-    padding: 10,
+});
+
+const columnStyle = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent:'center'
+  },
+});
+
+const buttonStyle = StyleSheet.create({
+
+  buttonWeather: {
+    backgroundColor: '#00b0ff',
+    height: 150,
+    width: 150,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderRadius: 100/10,
+  },
+
+  buttonTravel: {
+    backgroundColor: '#ff6f00',
+    height: 150,
+    width: 150,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderRadius: 100/10,
+  },
+
+  buttonTramvay: {
+    backgroundColor: '#ff6f00',
+    height: 150,
+    width: 150,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderRadius: 100/10,
+  },
+
+  buttonNews: {
+    backgroundColor: '#00b0ff',
+    height: 150,
+    width: 150,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderRadius: 100/10,
+  },
+
+  buttonPharmacy: {
+    backgroundColor: '#00b0ff',
+    height: 150,
+    width: 150,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderRadius: 100/10,
+  },
+
+  buttonPhoneNumbers: {
+    backgroundColor: '#ff6f00',
+    height: 150,
+    width: 150,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent:'center',
+    borderRadius: 100/10,
+  },
+
+  buttonText: {
+    textAlign: 'center',
+    fontSize: 26, // this is 16 points
+    color: 'white',
   },
 });
