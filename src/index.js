@@ -106,6 +106,7 @@ const columnStyle = StyleSheet.create({
 const buttonStyle = StyleSheet.create({
 
     buttonWeather: {
+        backgroundColor: '#00b0ff',
         height: '30%',
         width: '90%',
         marginBottom: 20,
