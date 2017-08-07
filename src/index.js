@@ -169,7 +169,7 @@ const buttonStyle = StyleSheet.create({
 
     buttonText: {
         textAlign: 'center',
-        fontSize: 32, // this is 16 points
+        fontSize: 32,
         color: 'white',
     },
 });
