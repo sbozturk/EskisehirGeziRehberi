@@ -14,10 +14,6 @@ import Weather from './screens/Weather';
 import News from './screens/News';
 
 const HomeScreen = React.createClass({
-  navigationOptions: {
-    title: 'Ana Sayfa',
-  },
-
   render() {
     const { navigate } = this.props.navigation;
 
@@ -170,7 +166,7 @@ const buttonStyle = StyleSheet.create({
 
   buttonText: {
     textAlign: 'center',
-    fontSize: 26, // this is 16 points
+    fontSize: 32, // this is 16 points
     color: 'white',
   },
 });

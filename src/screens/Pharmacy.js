@@ -10,7 +10,6 @@ import Odunpazari from './pharmacy/Odunpazari';
 import Tepebasi from './pharmacy/Tepebasi';
 
 const Pharmacy = React.createClass({
-
   render() {
     const { navigate } = this.props.navigation;
 
@@ -40,7 +39,7 @@ const App = StackNavigator({
   Tepebasi: { screen: Tepebasi },
 },
 {
-   headerMode: 'none'
+   headerMode: 'none',
 }
 );
 
