@@ -15,7 +15,7 @@ import News from './screens/News';
 
 const HomeScreen = React.createClass({
   navigationOptions: {
-    title: 'Welcome',
+    title: 'Ana Sayfa',
   },
 
   render() {
@@ -94,6 +94,7 @@ const rowStyle = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: 20,
   },
 });
 
@@ -109,8 +110,8 @@ const buttonStyle = StyleSheet.create({
 
   buttonWeather: {
     backgroundColor: '#00b0ff',
-    height: 150,
-    width: 150,
+    height: '30%',
+    width: '90%',
     marginBottom: 20,
     alignItems: 'center',
     justifyContent:'center',
@@ -119,8 +120,8 @@ const buttonStyle = StyleSheet.create({
 
   buttonTravel: {
     backgroundColor: '#ff6f00',
-    height: 150,
-    width: 150,
+    height: '30%',
+    width: '90%',
     marginBottom: 20,
     alignItems: 'center',
     justifyContent:'center',
@@ -129,8 +130,8 @@ const buttonStyle = StyleSheet.create({
 
   buttonTramvay: {
     backgroundColor: '#ff6f00',
-    height: 150,
-    width: 150,
+    height: '30%',
+    width: '90%',
     marginBottom: 20,
     alignItems: 'center',
     justifyContent:'center',
@@ -139,8 +140,8 @@ const buttonStyle = StyleSheet.create({
 
   buttonNews: {
     backgroundColor: '#00b0ff',
-    height: 150,
-    width: 150,
+    height: '30%',
+    width: '90%',
     marginBottom: 20,
     alignItems: 'center',
     justifyContent:'center',
@@ -149,8 +150,8 @@ const buttonStyle = StyleSheet.create({
 
   buttonPharmacy: {
     backgroundColor: '#00b0ff',
-    height: 150,
-    width: 150,
+    height: '30%',
+    width: '90%',
     marginBottom: 20,
     alignItems: 'center',
     justifyContent:'center',
@@ -159,8 +160,8 @@ const buttonStyle = StyleSheet.create({
 
   buttonPhoneNumbers: {
     backgroundColor: '#ff6f00',
-    height: 150,
-    width: 150,
+    height: '30%',
+    width: '90%',
     marginBottom: 20,
     alignItems: 'center',
     justifyContent:'center',
