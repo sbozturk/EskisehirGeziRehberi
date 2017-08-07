@@ -1,49 +1,82 @@
 import React, {Component} from 'react';
-import {StyleSheet, ActivityIndicator, ListView, Text, View} from 'react-native';
+import {StyleSheet, ListView, Text, View} from 'react-native';
+
+var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
 
 class Tepebasi extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoading: true
+            dataSource: new ListView.DataSource({
+                rowHasChanged: (row1, row2, row3) => row1 !== row2 !== row3,
+            }),
+            loaded: false,
         }
     }
 
     componentDidMount() {
-        return fetch('https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi')
+        this.fetchData();
+    }
+
+    fetchData() {
+        fetch(REQUEST_URL)
             .then((response) => response.json())
-            .then((responseJson) => {
-                let ds = new ListView.DataSource({rowHasChanged: (r1, r2, r3) => r1 !== r2 !== r3});
+            .then((responseData) => {
                 this.setState({
-                    isLoading: false,
-                    dataSource: ds.cloneWithRows(responseJson),
-                }, function () {
-                    // do something with new state
+                    dataSource: this.state.dataSource.cloneWithRows(responseData),
+                    loaded: true,
                 });
             })
-            .catch((error) => {
-                console.error(error);
-            });
+            .done();
     }
 
     render() {
-        if (this.state.isLoading) {
-            return (
-                <View style={{flex: 1, paddingTop: 20}}>
-                    <ActivityIndicator/>
-                </View>
-            );
+        if (!this.state.loaded) {
+            return this.renderLoadingView();
         }
 
         return (
-            <View style={{flex: 1, paddingTop: 20}}>
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={(rowData) => <Text>{rowData.name}, {rowData.address}, {rowData.telephone}</Text>}
-                />
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={this.renderPharmancy}
+                style={styles.listView}
+            />
+        );
+    }
+
+    renderLoadingView() {
+        return (
+            <View style={styles.container}>
+                <Text>
+                    Nöbetçi eczaneler yükleniyor...
+                </Text>
+            </View>
+        );
+    }
+
+    /*TODO: FIX UI*/
+    renderPharmancy(pharmancy) {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.title}>{pharmancy.name}</Text>
+                <Text>{pharmancy.address}</Text>
+                <Text>{pharmancy.name.telephone}</Text>
             </View>
         );
     }
 }
+
+var styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginBottom: 20,
+    },
+    title: {
+        fontSize: 20,
+        marginBottom: 8,
+        fontWeight: 'bold',
+    },
+});
+
 
 export default Tepebasi;
