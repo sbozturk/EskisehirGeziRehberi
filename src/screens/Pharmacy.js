@@ -30,14 +30,12 @@ const Pharmacy = React.createClass({
         <Text style={buttonStyle.buttonText}>Odunpazarı</Text>
       </TouchableOpacity>
       </View>
-
-
-
   );
   },
 });
 
 const App = StackNavigator({
+  Pharmacy: { screen: Pharmacy },
   Odunpazari: { screen: Odunpazari },
   Tepebasi: { screen: Tepebasi },
 });
@@ -76,4 +74,4 @@ const buttonStyle = StyleSheet.create({
 });
 
 
-export default Pharmacy;
+export default App;
