@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View, Image} from 'react-native';
+import {StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
+import Communications from 'react-native-communications';
 
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/technology';
 
@@ -48,23 +49,23 @@ class Teknoloji extends Component {
         return (
             <View style={styles.container}>
                 <Text>
-                    Nöbetçi eczaneler yükleniyor...
+                    Haberler yükleniyor...
                 </Text>
             </View>
         );
     }
 
-    /*TODO: FIX UI*/
     renderNews(news) {
         return (
-            <View style={styles.container}>
-                <Image
-                    source={{uri: news.picUrl}}
-                    style={styles.thumbnail}
-                />
-                <Text style={styles.title}>{news.title}</Text>
-                <Text>{news.url}</Text>
-            </View>
+            <TouchableOpacity onPress={() => Communications.web(news.url)}>
+                <View style={styles.container}>
+                    <Image
+                        source={{uri: news.picUrl}}
+                        style={styles.thumbnail}
+                    />
+                    <Text style={styles.title}>{news.title}</Text>
+                </View>
+            </TouchableOpacity>
         );
     }
 }
@@ -72,7 +73,7 @@ class Teknoloji extends Component {
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginBottom: 100,
+        marginBottom: 50,
     },
     title: {
         fontSize: 20,
@@ -81,9 +82,8 @@ var styles = StyleSheet.create({
     },
     thumbnail: {
         width: '100%',
-        height: '100%',
+        height: 150,
     },
 });
-
 
 export default Teknoloji;
