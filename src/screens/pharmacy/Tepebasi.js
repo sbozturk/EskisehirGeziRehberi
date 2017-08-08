@@ -39,43 +39,55 @@ class Tepebasi extends Component {
             <ListView
                 dataSource={this.state.dataSource}
                 renderRow={this.renderPharmancy}
-                style={styles.listView}
+                style={tepebasiStyle.listView}
             />
         );
     }
 
     renderLoadingView() {
         return (
-            <View style={styles.container}>
-                <Text>
+            <View style={tepebasiStyle.container}>
+                <Text style={tepebasiStyle.text}>
                     Nöbetçi eczaneler yükleniyor...
                 </Text>
             </View>
         );
     }
 
-    /*TODO: FIX UI*/
     renderPharmancy(pharmancy) {
         return (
-            <View style={styles.container}>
-                <Text style={styles.title}>{pharmancy.name}</Text>
-                <Text>{pharmancy.address}</Text>
-                <Text>{pharmancy.telephone}</Text>
+            <View style={tepebasiStyle.container}>
+                <Text style={tepebasiStyle.title}>{pharmancy.name}</Text>
+                <Text style={tepebasiStyle.text}>{pharmancy.address}</Text>
+                <Text style={tepebasiStyle.text}>{pharmancy.telephone}</Text>
             </View>
         );
     }
 }
 
-var styles = StyleSheet.create({
+var tepebasiStyle = StyleSheet.create({
     container: {
         flex: 1,
-        marginBottom: 20,
+        backgroundColor: '#fff',
     },
+
+    listView: {
+        backgroundColor: '#fff',
+    },
+
     title: {
-        fontSize: 20,
+        fontSize: 16,
         marginBottom: 8,
+        marginTop: 20,
+        marginRight: 20,
+        marginLeft: 30,
         fontWeight: 'bold',
     },
+
+    text: {
+        marginRight: 20,
+        marginLeft: 30,
+    }
 });
 
 
