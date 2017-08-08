@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View} from 'react-native';
+import {ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
 
 var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
 
@@ -46,10 +46,14 @@ class Odunpazari extends Component {
 
     renderLoadingView() {
         return (
-            <View style={odunpazariStyle.container}>
-                <Text style={odunpazariStyle.text}>
-                    Nöbetçi eczaneler yükleniyor...
-                </Text>
+            <View
+                style={{
+                    paddingTop: 10,
+                    flex: 1,
+                    backgroundColor: 'white',
+                }}
+            >
+                <ActivityIndicator/>
             </View>
         );
     }

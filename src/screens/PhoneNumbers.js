@@ -58,7 +58,7 @@ var styles = StyleSheet.create({
         borderRadius: 100 / 10,
         backgroundColor: '#05265b',
         marginTop: 20,
-        height: 60,
+        height: 45,
         width: 350,
     },
     text: {

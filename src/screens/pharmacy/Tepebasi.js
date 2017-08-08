@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View} from 'react-native';
+import {ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
 
 var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
 
@@ -46,10 +46,14 @@ class Tepebasi extends Component {
 
     renderLoadingView() {
         return (
-            <View style={tepebasiStyle.container}>
-                <Text style={tepebasiStyle.text}>
-                    Nöbetçi eczaneler yükleniyor...
-                </Text>
+            <View
+                style={{
+                    paddingTop: 10,
+                    flex: 1,
+                    backgroundColor: 'white',
+                }}
+            >
+                <ActivityIndicator/>
             </View>
         );
     }

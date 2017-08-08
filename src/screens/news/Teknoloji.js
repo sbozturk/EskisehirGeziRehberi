@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
+import {ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
 import Communications from 'react-native-communications';
 
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/technology';
@@ -47,10 +47,14 @@ class Teknoloji extends Component {
 
     renderLoadingView() {
         return (
-            <View style={styles.container}>
-                <Text>
-                    Haberler yükleniyor...
-                </Text>
+            <View
+                style={{
+                    paddingTop: 10,
+                    flex: 1,
+                    backgroundColor: 'white',
+                }}
+            >
+                <ActivityIndicator/>
             </View>
         );
     }
