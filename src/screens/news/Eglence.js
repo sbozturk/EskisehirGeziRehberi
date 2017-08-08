@@ -1,49 +1,89 @@
 import React, {Component} from 'react';
-import {StyleSheet, ActivityIndicator, ListView, Text, View} from 'react-native';
+import {StyleSheet, ListView, Text, View, Image} from 'react-native';
+
+var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/fun';
 
 class Eglence extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoading: true
+            dataSource: new ListView.DataSource({
+                rowHasChanged: (row1, row2, row3) => row1 !== row2 !== row3,
+            }),
+            loaded: false,
         }
     }
 
     componentDidMount() {
-        return fetch('https://esgazete-api.herokuapp.com/esgazete/fun')
+        this.fetchData();
+    }
+
+    fetchData() {
+        fetch(REQUEST_URL)
             .then((response) => response.json())
-            .then((responseJson) => {
-                let ds = new ListView.DataSource({rowHasChanged: (r1, r2, r3) => r1 !== r2 !== r3});
+            .then((responseData) => {
                 this.setState({
-                    isLoading: false,
-                    dataSource: ds.cloneWithRows(responseJson),
-                }, function () {
-                    // do something with new state
+                    dataSource: this.state.dataSource.cloneWithRows(responseData),
+                    loaded: true,
                 });
             })
-            .catch((error) => {
-                console.error(error);
-            });
+            .done();
     }
 
     render() {
-        if (this.state.isLoading) {
-            return (
-                <View style={{flex: 1, paddingTop: 20}}>
-                    <ActivityIndicator/>
-                </View>
-            );
+        if (!this.state.loaded) {
+            return this.renderLoadingView();
         }
 
         return (
-            <View style={{flex: 1, paddingTop: 20}}>
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={(rowData) => <Text>{rowData.title}, {rowData.url}, {rowData.picUrl}</Text>}
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={this.renderNews}
+                style={styles.listView}
+            />
+        );
+    }
+
+    renderLoadingView() {
+        return (
+            <View style={styles.container}>
+                <Text>
+                    Nöbetçi eczaneler yükleniyor...
+                </Text>
+            </View>
+        );
+    }
+
+    /*TODO: FIX UI*/
+    renderNews(news) {
+        return (
+            <View style={styles.container}>
+                <Image
+                    source={{uri: news.picUrl}}
+                    style={styles.thumbnail}
                 />
+                <Text style={styles.title}>{news.title}</Text>
+                <Text>{news.url}</Text>
             </View>
         );
     }
 }
+
+var styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginBottom: 100,
+    },
+    title: {
+        fontSize: 20,
+        marginBottom: 8,
+        fontWeight: 'bold',
+    },
+    thumbnail: {
+        width: '100%',
+        height: '100%',
+    },
+});
+
 
 export default Eglence;
