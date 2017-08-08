@@ -9,22 +9,22 @@ const PhoneNumbers = React.createClass({
             <View style={styles.container}>
                 <TouchableOpacity onPress={() => Communications.phonecall('112', true)}>
                     <View style={styles.holder}>
-                        <Text style={styles.text}>Acil Yardım</Text>
+                        <Text style={styles.text}>Ambulans</Text>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall('110', true)}>
                     <View style={styles.holder}>
-                        <Text style={styles.text}>Alo İtfaiye</Text>
+                        <Text style={styles.text}>İtfaiye</Text>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall('155', true)}>
                     <View style={styles.holder}>
-                        <Text style={styles.text}>Polis İmdat</Text>
+                        <Text style={styles.text}>Polis</Text>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall('156', true)}>
                     <View style={styles.holder}>
-                        <Text style={styles.text}>Jandarma İmdat</Text>
+                        <Text style={styles.text}>Jandarma</Text>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall('185', true)}>
@@ -51,13 +51,20 @@ var styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: 'rgb(253,253,253)',
+        backgroundColor: '#fff',
     },
     holder: {
         justifyContent: 'center',
+        borderRadius: 100 / 10,
+        backgroundColor: '#05265b',
+        marginTop: 20,
+        height: 60,
+        width: 350,
     },
     text: {
+        textAlign: 'center',
         fontSize: 32,
+        color: '#fff',
     },
 });
 
