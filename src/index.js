@@ -13,7 +13,11 @@ import Travel from './screens/Travel';
 import Weather from './screens/Weather';
 import News from './screens/News';
 
-const HomeScreen = React.createClass({
+class HomeScreen extends React.Component {
+    static navigationOptions = {
+        title: 'Eskişehir Gezi Rehberi',
+    };
+
     render() {
         const {navigate} = this.props.navigation;
 
@@ -70,8 +74,8 @@ const HomeScreen = React.createClass({
 
 
         );
-    },
-});
+    }
+}
 
 const App = StackNavigator({
     Home: {screen: HomeScreen},

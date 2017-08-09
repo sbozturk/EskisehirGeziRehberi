@@ -19,6 +19,10 @@ class LoadingIndicator extends Component {
 }
 
 class Weather extends Component {
+    static navigationOptions = {
+        title: 'Hava Durumu',
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -30,7 +34,7 @@ class Weather extends Component {
         this.setState({isLoading: true});
 
         fetch(
-            `http://api.openweathermap.org/data/2.5/find?q=Eskisehir&units=metric&appid=ea2b8fad5846f2a27f48d270819041e7`
+            `https://api.openweathermap.org/data/2.5/find?q=Eskisehir&units=metric&appid=ea2b8fad5846f2a27f48d270819041e7`
         )
             .then(res => res.json())
             .then(responseData => {
@@ -46,7 +50,7 @@ class Weather extends Component {
                         pressure: responseData.list[0].main.pressure,
                         wind_speed: responseData.list[0].wind.speed,
                         cloudiness: responseData.list[0].clouds.all,
-                        icon: 'http://openweathermap.org/img/w/' + responseData.list[0].weather[0].icon + '.png',
+                        icon: 'https://openweathermap.org/img/w/' + responseData.list[0].weather[0].icon + '.png',
                     },
                 });
             });

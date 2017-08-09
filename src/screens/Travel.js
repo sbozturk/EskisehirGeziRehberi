@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
-import {Tile, List, ListItem, Button, Text} from 'react-native-elements';
+import { WebView } from 'react-native';
 
 class Travel extends Component {
+    static navigationOptions = {
+        title: 'Gezilecek Yerler',
+    };
+
     render() {
         return (
-            <Text> Gezilecek Yerler </Text>
+            <WebView
+                source={{uri: 'https://www.tripadvisor.com.tr/Attractions-g319806-Activities-Eskisehir_Eskisehir_Province.html'}}
+                style={{marginTop: -116}}
+            />
         );
     }
 }
