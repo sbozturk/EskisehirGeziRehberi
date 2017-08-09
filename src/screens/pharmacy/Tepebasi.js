@@ -4,6 +4,10 @@ import {ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native'
 var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
 
 class Tepebasi extends Component {
+    static navigationOptions = {
+        title: 'Tepebaşı Nöbetçi Eczaneler',
+    };
+
     constructor(props) {
         super(props);
         this.state = {

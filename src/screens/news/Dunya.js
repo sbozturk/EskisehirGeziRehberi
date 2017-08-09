@@ -8,6 +8,7 @@ class Dunya extends Component {
     static navigationOptions = {
         title: 'Dünya',
     };
+
     constructor(props) {
         super(props);
         this.state = {

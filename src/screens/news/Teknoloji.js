@@ -8,6 +8,7 @@ class Teknoloji extends Component {
     static navigationOptions = {
         title: 'Teknoloji',
     };
+
     constructor(props) {
         super(props);
         this.state = {

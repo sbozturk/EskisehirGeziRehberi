@@ -9,7 +9,11 @@ import {StackNavigator} from 'react-navigation';
 import Odunpazari from './pharmacy/Odunpazari';
 import Tepebasi from './pharmacy/Tepebasi';
 
-const Pharmacy = React.createClass({
+class Pharmacy extends React.Component {
+    static navigationOptions = {
+        title: 'Nöbetçi Eczaneler',
+    };
+
     render() {
         const {navigate} = this.props.navigation;
 
@@ -30,8 +34,8 @@ const Pharmacy = React.createClass({
                 </TouchableOpacity>
             </View>
         );
-    },
-});
+    }
+}
 
 const App = StackNavigator({
         Pharmacy: {screen: Pharmacy},

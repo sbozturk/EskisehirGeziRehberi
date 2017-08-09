@@ -8,6 +8,7 @@ class Gundem extends Component {
     static navigationOptions = {
         title: 'Gündem',
     };
+
     constructor(props) {
         super(props);
         this.state = {

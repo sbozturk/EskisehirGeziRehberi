@@ -8,6 +8,7 @@ class Eglence extends Component {
     static navigationOptions = {
         title: 'Eğlence',
     };
+
     constructor(props) {
         super(props);
         this.state = {

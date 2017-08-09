@@ -8,6 +8,7 @@ class Siyaset extends Component {
     static navigationOptions = {
         title: 'Siyaset',
     };
+
     constructor(props) {
         super(props);
         this.state = {

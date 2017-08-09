@@ -4,6 +4,10 @@ import {ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native'
 var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
 
 class Odunpazari extends Component {
+    static navigationOptions = {
+        title: 'Odunpazarı Nöbetçi Eczaneler',
+    };
+
     constructor(props) {
         super(props);
         this.state = {

@@ -8,6 +8,7 @@ class Ekonomi extends Component {
     static navigationOptions = {
         title: 'Ekonomi',
     };
+
     constructor(props) {
         super(props);
         this.state = {

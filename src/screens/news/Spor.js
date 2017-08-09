@@ -8,6 +8,7 @@ class Spor extends Component {
     static navigationOptions = {
         title: 'Spor',
     };
+
     constructor(props) {
         super(props);
         this.state = {

@@ -8,6 +8,7 @@ class Magazin extends Component {
     static navigationOptions = {
         title: 'Magazin',
     };
+
     constructor(props) {
         super(props);
         this.state = {
