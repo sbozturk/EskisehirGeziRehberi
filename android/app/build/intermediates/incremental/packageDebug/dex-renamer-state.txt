@@ -1,4 +1,4 @@
-#Wed Aug 09 10:15:31 EEST 2017
-base.0=/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Wed Aug 09 12:54:29 EET 2017
+base.0=C\:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=C\:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

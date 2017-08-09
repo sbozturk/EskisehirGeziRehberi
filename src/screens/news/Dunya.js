@@ -5,6 +5,9 @@ import Communications from 'react-native-communications';
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/world';
 
 class Dunya extends Component {
+    static navigationOptions = {
+        title: 'Dünya',
+    };
     constructor(props) {
         super(props);
         this.state = {

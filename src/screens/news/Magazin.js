@@ -5,6 +5,9 @@ import Communications from 'react-native-communications';
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/magazin';
 
 class Magazin extends Component {
+    static navigationOptions = {
+        title: 'Magazin',
+    };
     constructor(props) {
         super(props);
         this.state = {

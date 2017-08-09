@@ -5,6 +5,9 @@ import Communications from 'react-native-communications';
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/economy';
 
 class Ekonomi extends Component {
+    static navigationOptions = {
+        title: 'Ekonomi',
+    };
     constructor(props) {
         super(props);
         this.state = {

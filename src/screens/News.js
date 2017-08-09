@@ -16,7 +16,10 @@ import Spor from './news/Spor';
 import Teknoloji from './news/Teknoloji';
 
 
-const News = React.createClass({
+class News extends React.Component {
+    static navigationOptions = {
+        title: 'Haberler',
+    };
     render() {
         const {navigate} = this.props.navigation;
 
@@ -86,23 +89,23 @@ const News = React.createClass({
 
 
         );
-    },
-});
+    }
+}
 
 const App = StackNavigator({
-    News: {screen: News},
-    Dunya: {screen: Dunya},
-    Eglence: {screen: Eglence},
-    Ekonomi: {screen: Ekonomi},
-    Gundem: {screen: Gundem},
-    Magazin: {screen: Magazin},
-    Siyaset: {screen: Siyaset},
-    Spor: {screen: Spor},
-    Teknoloji: {screen: Teknoloji},
-},
-{
-    headerMode: 'none',
-}
+        News: {screen: News},
+        Dunya: {screen: Dunya},
+        Eglence: {screen: Eglence},
+        Ekonomi: {screen: Ekonomi},
+        Gundem: {screen: Gundem},
+        Magazin: {screen: Magazin},
+        Siyaset: {screen: Siyaset},
+        Spor: {screen: Spor},
+        Teknoloji: {screen: Teknoloji},
+    },
+    {
+        headerMode: 'none',
+    }
 );
 
 const rowStyle = StyleSheet.create({

@@ -5,6 +5,9 @@ import Communications from 'react-native-communications';
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/fun';
 
 class Eglence extends Component {
+    static navigationOptions = {
+        title: 'Eğlence',
+    };
     constructor(props) {
         super(props);
         this.state = {

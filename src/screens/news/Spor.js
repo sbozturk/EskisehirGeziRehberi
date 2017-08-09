@@ -5,6 +5,9 @@ import Communications from 'react-native-communications';
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/sport';
 
 class Spor extends Component {
+    static navigationOptions = {
+        title: 'Spor',
+    };
     constructor(props) {
         super(props);
         this.state = {

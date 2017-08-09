@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
-        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
 ]

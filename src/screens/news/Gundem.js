@@ -5,6 +5,9 @@ import Communications from 'react-native-communications';
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/agenda';
 
 class Gundem extends Component {
+    static navigationOptions = {
+        title: 'Gündem',
+    };
     constructor(props) {
         super(props);
         this.state = {

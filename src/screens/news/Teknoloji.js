@@ -5,6 +5,9 @@ import Communications from 'react-native-communications';
 var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/technology';
 
 class Teknoloji extends Component {
+    static navigationOptions = {
+        title: 'Teknoloji',
+    };
     constructor(props) {
         super(props);
         this.state = {
