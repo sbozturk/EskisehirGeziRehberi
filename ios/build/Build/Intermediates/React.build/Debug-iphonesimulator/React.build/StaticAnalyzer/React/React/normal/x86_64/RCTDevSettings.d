@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTJSEnvironment.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h

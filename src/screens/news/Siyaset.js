@@ -82,6 +82,7 @@ var styles = StyleSheet.create({
     title: {
         fontSize: 20,
         marginBottom: 8,
+        textAlign: 'center',
         fontWeight: 'bold',
     },
     thumbnail: {

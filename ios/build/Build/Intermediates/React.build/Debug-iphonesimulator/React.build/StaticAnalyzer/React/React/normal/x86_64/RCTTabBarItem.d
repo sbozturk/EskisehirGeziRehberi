@@ -1,0 +1,17 @@
+dependencies: \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/RCTTabBarItem.m \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/RCTTabBarItem.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/sbozturk/Desktop/EskisehirGeziRehberi/node_modules/react-native/React/Views/UIView+React.h
