@@ -162,7 +162,7 @@ class TramvaySaat extends Component {
 
     render() {
         return (
-            <View>
+            <View style={imgStyle.container}>
                 <Image
                     style={imgStyle.img}
                     source={imgRequire}
@@ -182,9 +182,13 @@ const App = StackNavigator({
 );
 
 const imgStyle = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
     img: {
-        width: '100%',
-        height: '100%',
+      flex: 1,
+      resizeMode: 'stretch', // or 'stretch'
+      width: '100%',
     },
 });
 
