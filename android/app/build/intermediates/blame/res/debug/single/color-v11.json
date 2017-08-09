@@ -1,18 +1,26 @@
 [
     {
-        "merged": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     }
 ]

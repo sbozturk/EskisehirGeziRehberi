@@ -1,10 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]

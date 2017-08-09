@@ -1,10 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
-        "source": "C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\xml\\preferences.xml"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\xml\\preferences.xml"
     },
     {
-        "merged": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
-        "source": "C:\\Users\\yucel\\ReactNative\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\xml\\preferences.xml"
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.1/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "/Users/sbozturk/Desktop/EskisehirGeziRehberi/android/C:\\Users\\sbozturk\\Desktop\\EskisehirGeziRehberi\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\xml\\preferences.xml"
     }
 ]
