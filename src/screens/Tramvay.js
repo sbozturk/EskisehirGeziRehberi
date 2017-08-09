@@ -10,7 +10,10 @@ import {StackNavigator} from 'react-navigation';
 
  let imgRequire;
 
-const Tramvay = React.createClass({
+class Tramvay extends React.Component {
+    static navigationOptions = {
+        title: 'Tramvay',
+    };
 
     render() {
         const {navigate} = this.props.navigation;
@@ -149,10 +152,14 @@ const Tramvay = React.createClass({
                 </View>
             </View>
         );
-    },
-});
+    }
+}
 
 class TramvaySaat extends Component {
+    static navigationOptions = {
+        title: 'Tramvay',
+    };
+
     render() {
         return (
             <View>

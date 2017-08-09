@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, TouchableOpacity, Text, View} from 'react-native';
 import Communications from 'react-native-communications';
 
-const PhoneNumbers = React.createClass({
+class PhoneNumbers extends React.Component {
+    static navigationOptions = {
+        title: 'Acil Numaralar',
+    };
 
     render() {
         return (
@@ -45,7 +48,7 @@ const PhoneNumbers = React.createClass({
             </View>
         );
     }
-});
+}
 
 var styles = StyleSheet.create({
     container: {

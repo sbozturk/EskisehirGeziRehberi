@@ -19,6 +19,10 @@ class LoadingIndicator extends Component {
 }
 
 class Weather extends Component {
+    static navigationOptions = {
+        title: 'Hava Durumu',
+    };
+
     constructor(props) {
         super(props);
         this.state = {
