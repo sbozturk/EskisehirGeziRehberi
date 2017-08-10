@@ -66,8 +66,10 @@ class Odunpazari extends Component {
     renderPharmancy(pharmancy) {
         return (
             <View style={odunpazariStyle.container}>
-                <Text style={odunpazariStyle.title}>{pharmancy.name}</Text>
-                <Text style={odunpazariStyle.text}>{pharmancy.address}</Text>
+                <TouchableOpacity onPress={() => Communications.web('https://www.google.com.tr/maps/place/' + pharmancy.address)}>
+                    <Text style={odunpazariStyle.title}>{pharmancy.name}</Text>
+                    <Text style={odunpazariStyle.text}>{pharmancy.address}</Text>
+                </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
                     <Text style={odunpazariStyle.text}>{pharmancy.telephone}</Text>
                 </TouchableOpacity>

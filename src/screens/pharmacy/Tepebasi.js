@@ -66,8 +66,10 @@ class Tepebasi extends Component {
     renderPharmancy(pharmancy) {
         return (
             <View style={tepebasiStyle.container}>
-                <Text style={tepebasiStyle.title}>{pharmancy.name}</Text>
-                <Text style={tepebasiStyle.text}>{pharmancy.address}</Text>
+                <TouchableOpacity onPress={() => Communications.web('https://www.google.com.tr/maps/place/' + pharmancy.address)}>
+                    <Text style={tepebasiStyle.title}>{pharmancy.name}</Text>
+                    <Text style={tepebasiStyle.text}>{pharmancy.address}</Text>
+                </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
                     <Text style={tepebasiStyle.text}>{pharmancy.telephone}</Text>
                 </TouchableOpacity>
