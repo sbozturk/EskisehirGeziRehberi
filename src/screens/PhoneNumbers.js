@@ -57,12 +57,10 @@ var styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     holder: {
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
         backgroundColor: '#05265b',
-        marginTop: 20,
-        height: 45,
-        width: 350,
+        marginTop: 15,
+        height: '11%',
+        width: 300,
     },
     text: {
         textAlign: 'center',
