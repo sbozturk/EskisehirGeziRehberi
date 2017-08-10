@@ -37,7 +37,7 @@ class Spor extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Spor.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Spor extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{

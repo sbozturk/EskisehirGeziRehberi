@@ -37,7 +37,7 @@ class Teknoloji extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Teknoloji.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Teknoloji extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{

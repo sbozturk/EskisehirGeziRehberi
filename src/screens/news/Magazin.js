@@ -37,7 +37,7 @@ class Magazin extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Magazin.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Magazin extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{

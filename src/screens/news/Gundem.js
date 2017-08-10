@@ -37,7 +37,7 @@ class Gundem extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Gundem.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Gundem extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{

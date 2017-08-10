@@ -37,7 +37,7 @@ class Dunya extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Dunya.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Dunya extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{

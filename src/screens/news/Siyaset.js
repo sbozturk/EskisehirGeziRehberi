@@ -37,7 +37,7 @@ class Siyaset extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Siyaset.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Siyaset extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{

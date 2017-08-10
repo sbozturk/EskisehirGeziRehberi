@@ -37,7 +37,7 @@ class Ekonomi extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Ekonomi.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Ekonomi extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{

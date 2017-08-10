@@ -37,7 +37,7 @@ class Eglence extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Eglence.renderLoadingView();
         }
 
         return (
@@ -49,7 +49,7 @@ class Eglence extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{
