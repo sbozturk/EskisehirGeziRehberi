@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
+import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
+import Communications from 'react-native-communications';
 
 var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
 
@@ -67,7 +68,9 @@ class Tepebasi extends Component {
             <View style={tepebasiStyle.container}>
                 <Text style={tepebasiStyle.title}>{pharmancy.name}</Text>
                 <Text style={tepebasiStyle.text}>{pharmancy.address}</Text>
-                <Text style={tepebasiStyle.text}>{pharmancy.telephone}</Text>
+                <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
+                    <Text style={tepebasiStyle.text}>{pharmancy.telephone}</Text>
+                </TouchableOpacity>
             </View>
         );
     }

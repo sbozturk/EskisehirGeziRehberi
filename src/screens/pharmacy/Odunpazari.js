@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
+import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
+import Communications from 'react-native-communications';
 
 var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
 
@@ -67,7 +68,9 @@ class Odunpazari extends Component {
             <View style={odunpazariStyle.container}>
                 <Text style={odunpazariStyle.title}>{pharmancy.name}</Text>
                 <Text style={odunpazariStyle.text}>{pharmancy.address}</Text>
-                <Text style={odunpazariStyle.text}>{pharmancy.telephone}</Text>
+                <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
+                    <Text style={odunpazariStyle.text}>{pharmancy.telephone}</Text>
+                </TouchableOpacity>
             </View>
         );
     }
