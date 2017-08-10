@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, View} from 'react-native';
+import {ActivityIndicator, View, Image} from 'react-native';
 import {ListItem} from 'react-native-elements';
 
 class LoadingIndicator extends Component {
@@ -64,8 +64,7 @@ class Weather extends Component {
         return (
             <View style={{flex: 1, backgroundColor: 'white'}}>
                 <ListItem
-                    title={this.state.city.name}
-                    subtitle={this.state.city.weather}
+                    title={this.state.city.weather}
                     avatar={{uri: this.state.city.icon}}
                     badge={{
                         value: this.state.city.temp + ' °C',
@@ -77,7 +76,7 @@ class Weather extends Component {
                 />
                 <ListItem
                     title="Nem"
-                    rightTitle={this.state.city.humidity + '%'}
+                    rightTitle={'%' + this.state.city.humidity}
                     hideChevron
                 />
                 <ListItem
@@ -92,8 +91,12 @@ class Weather extends Component {
                 />
                 <ListItem
                     title="Bulut Örtüsü"
-                    rightTitle={this.state.city.cloudiness + '%'}
+                    rightTitle={'%' + this.state.city.cloudiness}
                     hideChevron
+                />
+                <Image
+                  style={{flex:1, resizeMode: 'stretch', width: '100%',}}
+                  source={require('../assets/eses.png')}
                 />
             </View>
         );
