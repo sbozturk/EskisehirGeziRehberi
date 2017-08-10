@@ -87,7 +87,7 @@ class Weather extends Component {
                 />
                 <ListItem
                     title="Rüzgar Hızı"
-                    rightTitle={this.state.city.wind_speed + ' mph'}
+                    rightTitle={this.state.city.wind_speed + ' m/s'}
                     hideChevron
                 />
                 <ListItem
