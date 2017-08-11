@@ -10,7 +10,6 @@ class Travel extends Component {
         return (
             <WebView
                 source={{uri: 'https://www.tripadvisor.com.tr/Attractions-g319806-Activities-Eskisehir_Eskisehir_Province.html'}}
-                style={{marginTop: -116}}
             />
         );
     }
