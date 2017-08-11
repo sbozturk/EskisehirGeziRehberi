@@ -4,31 +4,6 @@ import Communications from 'react-native-communications';
 
 const REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
 
-const tepebasiStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
-
-    listView: {
-        backgroundColor: '#fff',
-    },
-
-    title: {
-        fontSize: 16,
-        marginBottom: 8,
-        marginTop: 20,
-        marginRight: 20,
-        marginLeft: 30,
-        fontWeight: 'bold',
-    },
-
-    text: {
-        marginRight: 20,
-        marginLeft: 30,
-    }
-});
-
 class Tepebasi extends Component {
     static navigationOptions = {
         title: 'Tepebaşı Nöbetçi Eczaneler',
@@ -96,11 +71,53 @@ class Tepebasi extends Component {
                     <Text style={tepebasiStyle.text}>{pharmancy.address}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
-                    <Text style={tepebasiStyle.text}>{pharmancy.telephone}</Text>
+                    <Text style={tepebasiStyle.textTelephone}>{pharmancy.telephone}</Text>
                 </TouchableOpacity>
             </View>
         );
     }
 }
 
+const tepebasiStyle = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        backgroundColor: '#fff',
+        borderColor: '#ff6f00',
+        borderWidth: 2,
+        borderRadius: 100 / 10,
+        marginTop: 5,
+        marginLeft: 20,
+        marginRight: 20
+    },
+
+    listView: {
+        backgroundColor: '#fff',
+    },
+
+    title: {
+        fontSize: 16,
+        marginBottom: 8,
+        marginTop: 10,
+        marginRight: 10,
+        marginLeft: 10,
+        fontWeight: 'bold',
+    },
+
+    text: {
+        marginRight: 10,
+        marginLeft: 10,
+    },
+
+    textTelephone: {
+      marginRight: 10,
+      marginLeft: 10,
+      marginTop: 10,
+      marginBottom: 10
+
+    },
+});
+
+console.disableYellowBox = true;
 export default Tepebasi;

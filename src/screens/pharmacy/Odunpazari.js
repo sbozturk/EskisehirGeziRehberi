@@ -71,7 +71,7 @@ class Odunpazari extends Component {
                     <Text style={odunpazariStyle.text}>{pharmancy.address}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
-                    <Text style={odunpazariStyle.text}>{pharmancy.telephone}</Text>
+                    <Text style={odunpazariStyle.textTelephone}>{pharmancy.telephone}</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -79,29 +79,45 @@ class Odunpazari extends Component {
 }
 
 var odunpazariStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
+  container: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 1,
+      backgroundColor: '#fff',
+      borderColor: '#00b0ff',
+      borderWidth: 2,
+      borderRadius: 100 / 10,
+      marginTop: 5,
+      marginLeft: 20,
+      marginRight: 20
+  },
 
-    listView: {
-        backgroundColor: '#fff',
-    },
+  listView: {
+      backgroundColor: '#fff',
+  },
 
-    title: {
-        fontSize: 16,
-        marginBottom: 8,
-        marginTop: 20,
-        marginRight: 20,
-        marginLeft: 30,
-        fontWeight: 'bold',
-    },
+  title: {
+      fontSize: 16,
+      marginBottom: 8,
+      marginTop: 10,
+      marginRight: 10,
+      marginLeft: 10,
+      fontWeight: 'bold',
+  },
 
-    text: {
-        marginRight: 20,
-        marginLeft: 30,
-    }
+  text: {
+      marginRight: 10,
+      marginLeft: 10,
+  },
+
+  textTelephone: {
+    marginRight: 10,
+    marginLeft: 10,
+    marginTop: 10,
+    marginBottom: 10
+
+  },
 });
 
-
+console.disableYellowBox = true;
 export default Odunpazari;
