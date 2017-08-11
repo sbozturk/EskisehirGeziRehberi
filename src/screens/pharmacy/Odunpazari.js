@@ -2,32 +2,7 @@ import React, {Component} from 'react';
 import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
 import Communications from 'react-native-communications';
 
-const REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
-
-const odunpazariStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
-
-    listView: {
-        backgroundColor: '#fff',
-    },
-
-    title: {
-        fontSize: 16,
-        marginBottom: 8,
-        marginTop: 20,
-        marginRight: 20,
-        marginLeft: 30,
-        fontWeight: 'bold',
-    },
-
-    text: {
-        marginRight: 20,
-        marginLeft: 30,
-    }
-});
+var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
 
 class Odunpazari extends Component {
     static navigationOptions = {
@@ -62,7 +37,7 @@ class Odunpazari extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return Odunpazari.renderLoadingView();
+            return this.renderLoadingView();
         }
 
         return (
@@ -74,7 +49,7 @@ class Odunpazari extends Component {
         );
     }
 
-    static renderLoadingView() {
+    renderLoadingView() {
         return (
             <View
                 style={{
@@ -102,5 +77,31 @@ class Odunpazari extends Component {
         );
     }
 }
+
+var odunpazariStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+
+    listView: {
+        backgroundColor: '#fff',
+    },
+
+    title: {
+        fontSize: 16,
+        marginBottom: 8,
+        marginTop: 20,
+        marginRight: 20,
+        marginLeft: 30,
+        fontWeight: 'bold',
+    },
+
+    text: {
+        marginRight: 20,
+        marginLeft: 30,
+    }
+});
+
 
 export default Odunpazari;
