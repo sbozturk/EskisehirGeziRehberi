@@ -15,7 +15,6 @@ import Siyaset from './news/Siyaset';
 import Spor from './news/Spor';
 import Teknoloji from './news/Teknoloji';
 
-
 class News extends React.Component {
     static navigationOptions = {
         title: 'Haberler',
@@ -129,7 +128,6 @@ const columnStyle = StyleSheet.create({
 const buttonStyle = StyleSheet.create({
 
     buttonTop: {
-        backgroundColor: '#05265b',
         height: '22%',
         width: '90%',
         marginBottom: 20,
@@ -140,7 +138,6 @@ const buttonStyle = StyleSheet.create({
     },
 
     buttonNews: {
-        backgroundColor: '#05265b',
         height: '22%',
         width: '90%',
         marginBottom: 20,
@@ -152,7 +149,7 @@ const buttonStyle = StyleSheet.create({
     buttonText: {
         textAlign: 'center',
         fontSize: 32,
-        color: 'white',
+        color: '#000',
     },
 });
 
