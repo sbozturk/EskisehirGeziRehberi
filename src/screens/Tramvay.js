@@ -21,7 +21,7 @@ class Tramvay extends React.Component {
         return ( <View style={rowStyle.container}>
                 <View style={columnStyle.container}>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/a.jpg');
                             navigate('TramvaySaat')
@@ -30,7 +30,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>SSK OTOGAR</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonOrange}
+                        style={buttonStyle.buttonBlue}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/c.jpg');
                             navigate('TramvaySaat')
@@ -39,7 +39,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>OSMANGAZİ SSK</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/e.jpg');
                             navigate('TramvaySaat')
@@ -48,7 +48,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>OSMANGAZİ OTOGAR</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonOrange}
+                        style={buttonStyle.buttonBlue}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/g.jpg');
                             navigate('TramvaySaat')
@@ -58,7 +58,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>OPERA</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/i.jpg');
                             navigate('TramvaySaat')
@@ -67,7 +67,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>SSK BATIKENT</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonOrange}
+                        style={buttonStyle.buttonBlue}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/k.jpg');
                             navigate('TramvaySaat')
@@ -76,7 +76,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>SSK ÇAMLICA</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/m.jpg');
                             navigate('TramvaySaat')
@@ -88,7 +88,7 @@ class Tramvay extends React.Component {
 
                 <View style={columnStyle.container}>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/b.jpg');
                             navigate('TramvaySaat')
@@ -97,7 +97,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>OTOGAR SSK</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonOrange}
+                        style={buttonStyle.buttonBlue}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/d.jpg');
                             navigate('TramvaySaat')
@@ -106,7 +106,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>SSK OSMANGAZİ</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/f.jpg');
                             navigate('TramvaySaat')
@@ -115,7 +115,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>OTOGAR OSMANGAZİ</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonOrange}
+                        style={buttonStyle.buttonBlue}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/h.jpg');
                             navigate('TramvaySaat')
@@ -125,7 +125,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>EMEK/71 EVLER</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/j.jpg');
                             navigate('TramvaySaat')
@@ -134,7 +134,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>BATIKENT SSK</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonOrange}
+                        style={buttonStyle.buttonBlue}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/l.jpg');
                             navigate('TramvaySaat')
@@ -143,7 +143,7 @@ class Tramvay extends React.Component {
                         <Text style={buttonStyle.buttonText}>ÇAMLICA SSK</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={buttonStyle.buttonBlue}
+                        style={buttonStyle.buttonRed}
                         onPress={() => {
                             imgRequire = require('../assets/tramvay/n.jpg');
                             navigate('TramvaySaat')
@@ -214,8 +214,8 @@ const columnStyle = StyleSheet.create({
 
 const buttonStyle = StyleSheet.create({
 
-    buttonBlue: {
-        backgroundColor: '#00b0ff',
+    buttonRed: {
+        backgroundColor: '#da7166',
         height: '13.7%',
         width: '97%',
         marginTop: 3,
@@ -224,8 +224,8 @@ const buttonStyle = StyleSheet.create({
         borderRadius: 100 / 20,
     },
 
-    buttonOrange: {
-        backgroundColor: '#ff6f00',
+    buttonBlue: {
+        backgroundColor: '#0dadb1',
         height: '13.7%',
         width: '97%',
         marginTop: 3,
