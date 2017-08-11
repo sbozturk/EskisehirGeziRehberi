@@ -4,6 +4,7 @@ import {
     Text,
     View,
     TouchableOpacity,
+    Image
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import Dunya from './news/Dunya';
@@ -22,10 +23,15 @@ class News extends React.Component {
     render() {
         const {navigate} = this.props.navigation;
 
-        return ( <View style={rowStyle.container}>
+        return (
+          <Image
+            style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+            source={require('../assets/background.png')}
+          >
+                <View style={rowStyle.container}>
                 <View style={columnStyle.container}>
                     <TouchableOpacity
-                        style={buttonStyle.buttonTop}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Gundem')}
                     >
                         <Text style={buttonStyle.buttonText}>Gündem</Text>
@@ -55,7 +61,7 @@ class News extends React.Component {
 
                 <View style={columnStyle.container}>
                     <TouchableOpacity
-                        style={buttonStyle.buttonTop}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Siyaset')}
                     >
                         <Text style={buttonStyle.buttonText}>Siyaset</Text>
@@ -85,6 +91,8 @@ class News extends React.Component {
 
             </View>
 
+          </Image>
+
 
 
         );
@@ -112,7 +120,6 @@ const rowStyle = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#fff'
     },
 });
 
@@ -127,29 +134,20 @@ const columnStyle = StyleSheet.create({
 
 const buttonStyle = StyleSheet.create({
 
-    buttonTop: {
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
-        marginTop: 40,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
     buttonNews: {
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
+        height: '25%',
+        width: '100%',
+        backgroundColor: 'transparent',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 100 / 10,
+        borderColor: '#fff',
+        borderWidth: 2,
     },
 
     buttonText: {
         textAlign: 'center',
         fontSize: 32,
-        color: '#000',
+        color: '#fff',
     },
 });
 
