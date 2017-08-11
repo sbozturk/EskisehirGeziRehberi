@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
+import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View, Image} from 'react-native';
 import Communications from 'react-native-communications';
 
 var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
@@ -41,11 +41,15 @@ class Odunpazari extends Component {
         }
 
         return (
+          <Image
+          style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+          source={require('../../assets/background.png')}
+          >
             <ListView
                 dataSource={this.state.dataSource}
                 renderRow={this.renderPharmancy}
-                style={odunpazariStyle.listView}
             />
+          </Image>
         );
     }
 
@@ -84,16 +88,11 @@ var odunpazariStyle = StyleSheet.create({
       justifyContent: 'center',
       flex: 1,
       backgroundColor: '#fff',
-      borderColor: '#00b0ff',
+      borderColor: '#fff',
       borderWidth: 2,
-      borderRadius: 100 / 10,
-      marginTop: 5,
+      marginTop: 10,
       marginLeft: 20,
       marginRight: 20
-  },
-
-  listView: {
-      backgroundColor: '#fff',
   },
 
   title: {
