@@ -2,6 +2,28 @@ import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, TouchableOpacity, Text, View} from 'react-native';
 import Communications from 'react-native-communications';
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        justifyContent: 'center',
+    },
+    holder: {
+        justifyContent: 'center',
+        borderRadius: 100 / 10,
+        backgroundColor: '#05265b',
+        marginBottom: 20,
+        height: '10%',
+        width: '75%',
+    },
+    text: {
+        textAlign: 'center',
+        fontSize: 32,
+        color: '#fff',
+    },
+});
+
 class PhoneNumbers extends React.Component {
     static navigationOptions = {
         title: 'Acil Numaralar',
@@ -49,28 +71,5 @@ class PhoneNumbers extends React.Component {
         );
     }
 }
-
-var styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-    },
-    holder: {
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-        backgroundColor: '#05265b',
-        marginBottom: 20,
-        height: '10%',
-        width: '75%',
-    },
-    text: {
-        textAlign: 'center',
-        fontSize: 32,
-        color: '#fff',
-    },
-});
-
 
 export default PhoneNumbers;

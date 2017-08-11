@@ -2,7 +2,32 @@ import React, {Component} from 'react';
 import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View} from 'react-native';
 import Communications from 'react-native-communications';
 
-var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
+const REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
+
+const tepebasiStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+
+    listView: {
+        backgroundColor: '#fff',
+    },
+
+    title: {
+        fontSize: 16,
+        marginBottom: 8,
+        marginTop: 20,
+        marginRight: 20,
+        marginLeft: 30,
+        fontWeight: 'bold',
+    },
+
+    text: {
+        marginRight: 20,
+        marginLeft: 30,
+    }
+});
 
 class Tepebasi extends Component {
     static navigationOptions = {
@@ -37,7 +62,7 @@ class Tepebasi extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return this.renderLoadingView();
+            return Tepebasi.renderLoadingView();
         }
 
         return (
@@ -49,7 +74,7 @@ class Tepebasi extends Component {
         );
     }
 
-    renderLoadingView() {
+    static renderLoadingView() {
         return (
             <View
                 style={{
@@ -77,31 +102,5 @@ class Tepebasi extends Component {
         );
     }
 }
-
-var tepebasiStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
-
-    listView: {
-        backgroundColor: '#fff',
-    },
-
-    title: {
-        fontSize: 16,
-        marginBottom: 8,
-        marginTop: 20,
-        marginRight: 20,
-        marginLeft: 30,
-        fontWeight: 'bold',
-    },
-
-    text: {
-        marginRight: 20,
-        marginLeft: 30,
-    }
-});
-
 
 export default Tepebasi;

@@ -2,7 +2,24 @@ import React, {Component} from 'react';
 import {ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
 import Communications from 'react-native-communications';
 
-var REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/politics';
+const REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/politics';
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginBottom: 50,
+    },
+    title: {
+        fontSize: 20,
+        marginBottom: 8,
+        textAlign: 'center',
+        fontWeight: 'bold',
+    },
+    thumbnail: {
+        width: '100%',
+        height: 150,
+    },
+});
 
 class Siyaset extends Component {
     static navigationOptions = {
@@ -77,22 +94,5 @@ class Siyaset extends Component {
         );
     }
 }
-
-var styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginBottom: 50,
-    },
-    title: {
-        fontSize: 20,
-        marginBottom: 8,
-        textAlign: 'center',
-        fontWeight: 'bold',
-    },
-    thumbnail: {
-        width: '100%',
-        height: 150,
-    },
-});
 
 export default Siyaset;
