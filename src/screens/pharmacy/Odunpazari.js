@@ -55,15 +55,23 @@ class Odunpazari extends Component {
 
     renderLoadingView() {
         return (
+          <Image
+          style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+          source={require('../../assets/background.png')}
+          >
             <View
                 style={{
                     paddingTop: 10,
                     flex: 1,
-                    backgroundColor: 'white',
+                    backgroundColor: 'transparent',
                 }}
             >
-                <ActivityIndicator/>
+                <ActivityIndicator
+                style={[odunpazariStyle.centering, {height: 80}]}
+                size="large"
+                color='white'/>
             </View>
+          </Image>
         );
     }
 
@@ -114,7 +122,12 @@ var odunpazariStyle = StyleSheet.create({
     marginLeft: 10,
     marginTop: 10,
     marginBottom: 10
+  },
 
+  centering: {
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 8,
   },
 });
 
