@@ -96,7 +96,7 @@ class Weather extends Component {
                 />
                 <Image
                   style={{flex:1, resizeMode: 'stretch', width: '100%'}}
-                  source={require('../assets/eses.png')}
+                  source={require('../assets/eskisehir.png')}
                 />
             </View>
         );
