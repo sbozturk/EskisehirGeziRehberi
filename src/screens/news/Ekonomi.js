@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
-import Communications from 'react-native-communications';
+import {Alert, ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
 
-const REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/economy';
+const REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/world';
 
 const styles = StyleSheet.create({
     container: {
@@ -21,14 +20,39 @@ const styles = StyleSheet.create({
     },
 });
 
+const InternetAlert = () => {
+    const showAlert = () => {
+        Alert.alert(
+            'Bağlantı Hatası',
+            'Bağlantı sırasında bir hata ile karşılaşıldı.',
+            [
+                {text: 'TAMAM', onPress: () => console.log('OK Pressed')},
+            ],
+            { cancelable: false }
+        )
+    };
+    return (
+        <View
+            style={{
+                paddingTop: 10,
+                flex: 1,
+                backgroundColor: 'white',
+            }}
+        >
+            {showAlert()}
+        </View>
+    );
+};
+
 class Ekonomi extends Component {
     static navigationOptions = {
-        title: 'Ekonomi',
+        title: 'Dünya',
     };
 
     constructor(props) {
         super(props);
         this.state = {
+            internetConnection: true,
             dataSource: new ListView.DataSource({
                 rowHasChanged: (row1, row2, row3) => row1 !== row2 !== row3,
             }),
@@ -48,22 +72,27 @@ class Ekonomi extends Component {
                     dataSource: this.state.dataSource.cloneWithRows(responseData),
                     loaded: true,
                 });
-            })
-            .done();
+            }).catch(error => {
+            this.setState({internetConnection: false});
+        })
     }
 
     render() {
-        if (!this.state.loaded) {
-            return Ekonomi.renderLoadingView();
-        }
+        if (!this.state.internetConnection) {
+            return InternetAlert();
+        } else {
+            if (!this.state.loaded) {
+                return Ekonomi.renderLoadingView();
+            }
 
-        return (
-            <ListView
-                dataSource={this.state.dataSource}
-                renderRow={this.renderNews}
-                style={styles.listView}
-            />
-        );
+            return (
+                <ListView
+                    dataSource={this.state.dataSource}
+                    renderRow={this.renderNews}
+                    style={styles.listView}
+                />
+            );
+        }
     }
 
     static renderLoadingView() {
