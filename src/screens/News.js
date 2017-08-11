@@ -26,28 +26,28 @@ class News extends React.Component {
         return ( <View style={rowStyle.container}>
                 <View style={columnStyle.container}>
                     <TouchableOpacity
-                        style={buttonStyle.buttonGundem}
+                        style={buttonStyle.buttonTop}
                         onPress={() => navigate('Gundem')}
                     >
                         <Text style={buttonStyle.buttonText}>Gündem</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={buttonStyle.buttonSpor}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Spor')}
                     >
                         <Text style={buttonStyle.buttonText}>Spor</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={buttonStyle.buttonMagazin}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Magazin')}
                     >
                         <Text style={buttonStyle.buttonText}>Magazin</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={buttonStyle.buttonEkonomi}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Ekonomi')}
                     >
                         <Text style={buttonStyle.buttonText}>Ekonomi</Text>
@@ -56,28 +56,28 @@ class News extends React.Component {
 
                 <View style={columnStyle.container}>
                     <TouchableOpacity
-                        style={buttonStyle.buttonSiyaset}
+                        style={buttonStyle.buttonTop}
                         onPress={() => navigate('Siyaset')}
                     >
                         <Text style={buttonStyle.buttonText}>Siyaset</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={buttonStyle.buttonTeknoloji}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Teknoloji')}
                     >
                         <Text style={buttonStyle.buttonText}>Teknoloji</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={buttonStyle.buttonEglence}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Eglence')}
                     >
                         <Text style={buttonStyle.buttonText}>Eğlence</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={buttonStyle.buttonDunya}
+                        style={buttonStyle.buttonNews}
                         onPress={() => navigate('Dunya')}
                     >
                         <Text style={buttonStyle.buttonText}>Dünya</Text>
@@ -128,8 +128,8 @@ const columnStyle = StyleSheet.create({
 
 const buttonStyle = StyleSheet.create({
 
-    buttonGundem: {
-        backgroundColor: '#00b0ff',
+    buttonTop: {
+        backgroundColor: '#05265b',
         height: '22%',
         width: '90%',
         marginBottom: 20,
@@ -139,69 +139,8 @@ const buttonStyle = StyleSheet.create({
         borderRadius: 100 / 10,
     },
 
-    buttonSpor: {
-        backgroundColor: '#ff6f00',
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonMagazin: {
-        backgroundColor: '#00b0ff',
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonEkonomi: {
-        backgroundColor: '#ff6f00',
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonSiyaset: {
-        backgroundColor: '#ff6f00',
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
-        marginTop: 40,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonTeknoloji: {
-        backgroundColor: '#00b0ff',
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonEglence: {
-        backgroundColor: '#ff6f00',
-        height: '22%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonDunya: {
-        backgroundColor: '#00b0ff',
+    buttonNews: {
+        backgroundColor: '#05265b',
         height: '22%',
         width: '90%',
         marginBottom: 20,
