@@ -54,7 +54,8 @@ class Tramvay extends React.Component {
                             navigate('TramvaySaat')
                         }}
                     >
-                        <Text style={buttonStyle.buttonText}>EMEK/71 EVLER OPERA</Text>
+                        <Text style={buttonStyle.buttonText}>EMEK/71 EVLER</Text>
+                        <Text style={buttonStyle.buttonText}>OPERA</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={buttonStyle.buttonBlue}
@@ -120,7 +121,8 @@ class Tramvay extends React.Component {
                             navigate('TramvaySaat')
                         }}
                     >
-                        <Text style={buttonStyle.buttonText}>OPERA EMEK/71 EVLER</Text>
+                        <Text style={buttonStyle.buttonText}>OPERA</Text>
+                        <Text style={buttonStyle.buttonText}>EMEK/71 EVLER</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={buttonStyle.buttonBlue}
@@ -187,7 +189,7 @@ const imgStyle = StyleSheet.create({
     },
     img: {
       flex: 1,
-      resizeMode: 'stretch', // or 'stretch'
+      resizeMode: 'stretch',
       width: '100%',
     },
 });
@@ -214,28 +216,29 @@ const buttonStyle = StyleSheet.create({
 
     buttonBlue: {
         backgroundColor: '#00b0ff',
-        height: '10%',
-        width: '90%',
-        marginBottom: 20,
+        height: '13.7%',
+        width: '97%',
+        marginTop: 3,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 100 / 10,
+        borderRadius: 100 / 20,
     },
 
     buttonOrange: {
         backgroundColor: '#ff6f00',
-        height: '10%',
-        width: '90%',
-        marginBottom: 20,
+        height: '13.7%',
+        width: '97%',
+        marginTop: 3,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 100 / 10,
+        borderRadius: 100 / 20,
     },
 
     buttonText: {
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: 18,
         color: 'white',
+        fontWeight: 'bold'
     },
 });
 
