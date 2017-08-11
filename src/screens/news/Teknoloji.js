@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Alert, ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
 
-const REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/world';
+const REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/technology';
 
 const styles = StyleSheet.create({
     container: {
@@ -46,7 +46,7 @@ const InternetAlert = () => {
 
 class Teknoloji extends Component {
     static navigationOptions = {
-        title: 'Dünya',
+        title: 'Teknoloji',
     };
 
     constructor(props) {
