@@ -4,6 +4,7 @@ import {
     Text,
     View,
     TouchableOpacity,
+    Image
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import Pharmacy from './screens/Pharmacy';
@@ -21,58 +22,58 @@ class HomeScreen extends React.Component {
     render() {
         const {navigate} = this.props.navigation;
 
-        return ( <View style={rowStyle.container}>
+        return (<Image
+                  style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+                  source={require('./assets/background.png')}
+                >
+                <View style={rowStyle.container}>
                 <View style={columnStyle.container}>
-                    <TouchableOpacity
-                        style={buttonStyle.buttonWeather}
-                        onPress={() => navigate('Weather')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Hava Durumu</Text>
-                    </TouchableOpacity>
+                <TouchableOpacity
+                    style={buttonStyle.button}
+                    onPress={() => navigate('Weather')}
+                >
+                    <Text style={buttonStyle.buttonText}>Hava Durumu</Text>
+                </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={buttonStyle.buttonTramvay}
-                        onPress={() => navigate('Tramvay')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Tramvay</Text>
-                    </TouchableOpacity>
+                <TouchableOpacity
+                    style={buttonStyle.button}
+                    onPress={() => navigate('Tramvay')}
+                >
+                    <Text style={buttonStyle.buttonText}>Tramvay</Text>
+                </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={buttonStyle.buttonPharmacy}
-                        onPress={() => navigate('Pharmacy')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Nöbetçi Eczaneler</Text>
-                    </TouchableOpacity>
-                </View>
-
-                <View style={columnStyle.container}>
-                    <TouchableOpacity
-                        style={buttonStyle.buttonTravel}
-                        onPress={() => navigate('Travel')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Gezilecek Yerler</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('News')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Haberler</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={buttonStyle.buttonPhoneNumbers}
-                        onPress={() => navigate('PhoneNumbers')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Acil Numaralar</Text>
-                    </TouchableOpacity>
-
-                </View>
-
+                <TouchableOpacity
+                    style={buttonStyle.button}
+                    onPress={() => navigate('Pharmacy')}
+                >
+                    <Text style={buttonStyle.buttonText}>Nöbetçi Eczaneler</Text>
+                </TouchableOpacity>
             </View>
 
+            <View style={columnStyle.container}>
+                <TouchableOpacity
+                    style={buttonStyle.button}
+                    onPress={() => navigate('Travel')}
+                >
+                    <Text style={buttonStyle.buttonText}>Gezilecek Yerler</Text>
+                </TouchableOpacity>
 
+                <TouchableOpacity
+                    style={buttonStyle.button}
+                    onPress={() => navigate('News')}
+                >
+                    <Text style={buttonStyle.buttonText}>Haberler</Text>
+                </TouchableOpacity>
 
+                <TouchableOpacity
+                    style={buttonStyle.button}
+                    onPress={() => navigate('PhoneNumbers')}
+                >
+                    <Text style={buttonStyle.buttonText}>Acil Numaralar</Text>
+                </TouchableOpacity>
+                </View>
+                </View>
+                </Image>
         );
     }
 }
@@ -94,7 +95,6 @@ const rowStyle = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#fff'
     },
 });
 
@@ -109,71 +109,20 @@ const columnStyle = StyleSheet.create({
 
 const buttonStyle = StyleSheet.create({
 
-    buttonWeather: {
-        backgroundColor: '#00b0ff',
-        height: '30%',
-        width: '90%',
-        marginBottom: 20,
-        marginTop: 30,
+    button: {
+        backgroundColor: 'transparent',
+        height: '33.5%',
+        width: '100%',
+        borderColor: '#fff',
+        borderWidth: 2,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonTravel: {
-        backgroundColor: '#ff6f00',
-        height: '30%',
-        width: '90%',
-        marginBottom: 20,
-        marginTop: 30,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonTramvay: {
-        backgroundColor: '#ff6f00',
-        height: '30%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonNews: {
-        backgroundColor: '#00b0ff',
-        height: '30%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonPharmacy: {
-        backgroundColor: '#00b0ff',
-        height: '30%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-    },
-
-    buttonPhoneNumbers: {
-        backgroundColor: '#ff6f00',
-        height: '30%',
-        width: '90%',
-        marginBottom: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
     },
 
     buttonText: {
         textAlign: 'center',
         fontSize: 32,
+        fontWeight: 'bold',
         color: 'white',
     },
 });

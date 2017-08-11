@@ -4,6 +4,7 @@ import {
     Text,
     View,
     TouchableOpacity,
+    Image
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import Odunpazari from './pharmacy/Odunpazari';
@@ -17,22 +18,31 @@ class Pharmacy extends React.Component {
     render() {
         const {navigate} = this.props.navigation;
 
-        return ( <View style={columnStyle.container}>
+        return (
+
+          <Image
+            style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+            source={require('../assets/background.png')}
+          >
+
+                <View style={columnStyle.container}>
 
                 <TouchableOpacity
-                    style={buttonStyle.buttonTepebasi}
+                    style={buttonStyle.button}
                     onPress={() => navigate('Tepebasi')}
                 >
                     <Text style={buttonStyle.buttonText}>Tepebaşı</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={buttonStyle.buttonOdunpazari}
+                    style={buttonStyle.button}
                     onPress={() => navigate('Odunpazari')}
                 >
                     <Text style={buttonStyle.buttonText}>Odunpazarı</Text>
                 </TouchableOpacity>
             </View>
+
+          </Image>
         );
     }
 }
@@ -57,25 +67,19 @@ const columnStyle = StyleSheet.create({
 
 const buttonStyle = StyleSheet.create({
 
-    buttonOdunpazari: {
-        backgroundColor: '#00b0ff',
+    button: {
+        backgroundColor: 'transparent',
         height: '50%',
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
-    },
-
-    buttonTepebasi: {
-        backgroundColor: '#ff6f00',
-        height: '50%',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
+        borderColor: '#fff',
+        borderWidth: 2,
     },
 
     buttonText: {
         textAlign: 'center',
-        fontSize: 56, // this is 16 points
+        fontSize: 56,
         color: 'white',
     },
 });
