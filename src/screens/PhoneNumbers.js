@@ -1,28 +1,6 @@
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, TouchableOpacity, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, TouchableOpacity, Text, View, Image} from 'react-native';
 import Communications from 'react-native-communications';
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-    },
-    holder: {
-        justifyContent: 'center',
-        borderRadius: 100 / 10,
-        backgroundColor: '#05265b',
-        marginBottom: 20,
-        height: '10%',
-        width: '75%',
-    },
-    text: {
-        textAlign: 'center',
-        fontSize: 32,
-        color: '#fff',
-    },
-});
 
 class PhoneNumbers extends React.Component {
     static navigationOptions = {
@@ -31,6 +9,10 @@ class PhoneNumbers extends React.Component {
 
     render() {
         return (
+          <Image
+            style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+            source={require('../assets/background.png')}
+          >
             <View style={styles.container}>
                 <TouchableOpacity style={styles.holder} onPress={() => Communications.phonecall('112', true)}>
                     <View>
@@ -68,8 +50,33 @@ class PhoneNumbers extends React.Component {
                     </View>
                 </TouchableOpacity>
             </View>
+
+            </Image>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: 'transparent',
+        justifyContent: 'center',
+    },
+    holder: {
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+        height: '14.3%',
+        width: '100%',
+        borderColor: '#fff',
+        borderWidth: 2,
+    },
+    text: {
+        textAlign: 'center',
+        fontSize: 32,
+        color: '#fff',
+    },
+});
+
 
 export default PhoneNumbers;
