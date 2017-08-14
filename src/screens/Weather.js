@@ -1,22 +1,7 @@
 import React, {Component} from 'react';
 import {ActivityIndicator, View, Image} from 'react-native';
 import {ListItem} from 'react-native-elements';
-
-class LoadingIndicator extends Component {
-    render() {
-        return (
-            <View
-                style={{
-                    paddingTop: 10,
-                    flex: 1,
-                    backgroundColor: 'white',
-                }}
-            >
-                <ActivityIndicator/>
-            </View>
-        );
-    }
-}
+import Styles from "../util/Styles";
 
 class Weather extends Component {
     static navigationOptions = {
@@ -99,6 +84,30 @@ class Weather extends Component {
                     source={require('../assets/eskisehir.png')}
                 />
             </View>
+        );
+    }
+}
+
+class LoadingIndicator extends Component {
+    render() {
+        return (
+            <Image
+                style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+                source={require('../assets/background.png')}
+            >
+                <View
+                    style={{
+                        paddingTop: 10,
+                        flex: 1,
+                        backgroundColor: 'transparent',
+                    }}
+                >
+                    <ActivityIndicator
+                        style={[Styles.styleWeather.centering, {height: 80}]}
+                        size="large"
+                        color='white'/>
+                </View>
+            </Image>
         );
     }
 }
