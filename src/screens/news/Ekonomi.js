@@ -18,6 +18,11 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 150,
     },
+    centering: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 8,
+    },
 });
 
 const InternetAlert = () => {
@@ -97,15 +102,23 @@ class Ekonomi extends Component {
 
     static renderLoadingView() {
         return (
-            <View
-                style={{
-                    paddingTop: 10,
-                    flex: 1,
-                    backgroundColor: 'white',
-                }}
+            <Image
+                style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+                source={require('../../assets/background.png')}
             >
-                <ActivityIndicator/>
-            </View>
+                <View
+                    style={{
+                        paddingTop: 10,
+                        flex: 1,
+                        backgroundColor: 'transparent',
+                    }}
+                >
+                    <ActivityIndicator
+                        style={[styles.centering, {height: 80}]}
+                        size="large"
+                        color='white'/>
+                </View>
+            </Image>
         );
     }
 
