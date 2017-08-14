@@ -74,7 +74,7 @@ class Dunya extends Component {
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={this.renderNews}
-                    style={Styles.stylesNewsDetail.listView}
+                    style={Styles.styleNewsDetail.listView}
                 />
             );
         }
@@ -94,7 +94,7 @@ class Dunya extends Component {
                     }}
                 >
                     <ActivityIndicator
-                        style={[Styles.stylesNewsDetail.centering, {height: 80}]}
+                        style={[Styles.styleNewsDetail.centering, {height: 80}]}
                         size="large"
                         color='white'/>
                 </View>
@@ -105,12 +105,12 @@ class Dunya extends Component {
     renderNews(news) {
         return (
             <TouchableOpacity onPress={() => Communications.web(news.url)}>
-                <View style={Styles.stylesNewsDetail.container}>
+                <View style={Styles.styleNewsDetail.container}>
                     <Image
                         source={{uri: news.picUrl}}
-                        style={Styles.stylesNewsDetail.thumbnail}
+                        style={Styles.styleNewsDetail.thumbnail}
                     />
-                    <Text style={Styles.stylesNewsDetail.title}>{news.title}</Text>
+                    <Text style={Styles.styleNewsDetail.title}>{news.title}</Text>
                 </View>
             </TouchableOpacity>
         );
