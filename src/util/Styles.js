@@ -1,7 +1,36 @@
 import {StyleSheet} from 'react-native';
 
 class Styles {
-    static stylesNewsDetail = StyleSheet.create({
+    static styleNews = StyleSheet.create({
+        buttonNews: {
+            height: '25%',
+            width: '100%',
+            backgroundColor: 'transparent',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderColor: '#fff',
+            borderWidth: 2,
+        },
+
+        buttonText: {
+            textAlign: 'center',
+            fontSize: 32,
+            color: '#fff',
+        },
+        containerRow: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+        },
+        containerColumn: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+
+        },
+    });
+
+    static styleNewsDetail = StyleSheet.create({
         container: {
             flex: 1,
             marginBottom: 50,
@@ -20,6 +49,29 @@ class Styles {
             alignItems: 'center',
             justifyContent: 'center',
             padding: 8,
+        },
+    });
+
+    static stylePharmancy = StyleSheet.create({
+        button: {
+            backgroundColor: 'transparent',
+            height: '50%',
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderColor: '#fff',
+            borderWidth: 2,
+        },
+
+        buttonText: {
+            textAlign: 'center',
+            fontSize: 56,
+            color: 'white',
+        },
+        containerColumn: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center'
         },
     });
 
@@ -61,6 +113,67 @@ class Styles {
             alignItems: 'center',
             justifyContent: 'center',
             padding: 8,
+        },
+    });
+
+    static stylePhoneNumbers = StyleSheet.create({
+        container: {
+            flex: 1,
+            alignItems: 'center',
+            backgroundColor: 'transparent',
+            justifyContent: 'center',
+        },
+        holder: {
+            justifyContent: 'center',
+            backgroundColor: 'transparent',
+            height: '14.3%',
+            width: '100%',
+            borderColor: '#fff',
+            borderWidth: 2,
+        },
+        text: {
+            textAlign: 'center',
+            fontSize: 32,
+            color: '#fff',
+        },
+    });
+
+    static styleTramvay= StyleSheet.create({
+        containerImg: {
+            flex: 1,
+        },
+        img: {
+            flex: 1,
+            resizeMode: 'stretch',
+            width: '100%',
+        },
+        containerRow: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: 'transparent'
+        },
+        containerColumn: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+
+        },
+        button: {
+            backgroundColor: 'transparent',
+            height: '14.4%',
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderColor: '#fff',
+            borderWidth: 2,
+        },
+
+        buttonText: {
+            textAlign: 'center',
+            fontSize: 18,
+            color: 'white',
+            fontWeight: 'bold'
         },
     });
 
