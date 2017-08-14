@@ -1,28 +1,8 @@
 import React, {Component} from 'react';
-import {Alert, ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
+import {Alert, ActivityIndicator, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
+import Communications from 'react-native-communications';
 import Constant from "../../util/Constant";
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginBottom: 50,
-    },
-    title: {
-        fontSize: 20,
-        marginBottom: 8,
-        textAlign: 'center',
-        fontWeight: 'bold',
-    },
-    thumbnail: {
-        width: '100%',
-        height: 150,
-    },
-    centering: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 8,
-    },
-});
+import Styles from "../../util/Styles";
 
 const InternetAlert = () => {
     const showAlert = () => {
@@ -93,7 +73,7 @@ class Siyaset extends Component {
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={this.renderNews}
-                    style={styles.listView}
+                    style={Styles.stylesNewsDetail.listView}
                 />
             );
         }
@@ -113,7 +93,7 @@ class Siyaset extends Component {
                     }}
                 >
                     <ActivityIndicator
-                        style={[styles.centering, {height: 80}]}
+                        style={[Styles.stylesNewsDetail.centering, {height: 80}]}
                         size="large"
                         color='white'/>
                 </View>
@@ -124,12 +104,12 @@ class Siyaset extends Component {
     renderNews(news) {
         return (
             <TouchableOpacity onPress={() => Communications.web(news.url)}>
-                <View style={styles.container}>
+                <View style={Styles.stylesNewsDetail.container}>
                     <Image
                         source={{uri: news.picUrl}}
-                        style={styles.thumbnail}
+                        style={Styles.stylesNewsDetail.thumbnail}
                     />
-                    <Text style={styles.title}>{news.title}</Text>
+                    <Text style={Styles.stylesNewsDetail.title}>{news.title}</Text>
                 </View>
             </TouchableOpacity>
         );
