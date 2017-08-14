@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Alert, ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
-
-const REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/agenda';
+import Constant from "../../util/Constant";
 
 const styles = StyleSheet.create({
     container: {
@@ -70,7 +69,7 @@ class Gundem extends Component {
     }
 
     fetchData() {
-        fetch(REQUEST_URL)
+        fetch(Constant.REQUEST_URL_GUNDEM)
             .then((response) => response.json())
             .then((responseData) => {
                 this.setState({

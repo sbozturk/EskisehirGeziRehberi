@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Alert, ActivityIndicator, StyleSheet, ListView, Text, View, Image, TouchableOpacity} from 'react-native';
-
-const REQUEST_URL = 'https://esgazete-api.herokuapp.com/esgazete/world';
+import Constant from "../../util/Constant";
 
 const styles = StyleSheet.create({
     container: {
@@ -71,7 +70,7 @@ class Dunya extends Component {
     }
 
     fetchData() {
-        fetch(REQUEST_URL)
+        fetch(Constant.REQUEST_URL_DUNYA)
             .then((response) => response.json())
             .then((responseData) => {
                 this.setState({
