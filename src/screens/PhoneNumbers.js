@@ -14,40 +14,40 @@ class PhoneNumbers extends Component {
                 style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
                 source={require('../assets/background.png')}
             >
-                <View style={Styles.stylePharmancyDetail.container}>
-                    <TouchableOpacity style={Styles.stylePharmancyDetail.holder} onPress={() => Communications.phonecall('112', true)}>
+                <View style={Styles.stylePhoneNumbers.container}>
+                    <TouchableOpacity style={Styles.stylePhoneNumbers.holder} onPress={() => Communications.phonecall('112', true)}>
                         <View>
-                            <Text style={Styles.stylePharmancyDetail.text}>Ambulans</Text>
+                            <Text style={Styles.stylePhoneNumbers.text}>Ambulans</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={Styles.stylePharmancyDetail.holder} onPress={() => Communications.phonecall('110', true)}>
+                    <TouchableOpacity style={Styles.stylePhoneNumbers.holder} onPress={() => Communications.phonecall('110', true)}>
                         <View>
-                            <Text style={Styles.stylePharmancyDetail.text}>İtfaiye</Text>
+                            <Text style={Styles.stylePhoneNumbers.text}>İtfaiye</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={Styles.stylePharmancyDetail.holder} onPress={() => Communications.phonecall('155', true)}>
+                    <TouchableOpacity style={Styles.stylePhoneNumbers.holder} onPress={() => Communications.phonecall('155', true)}>
                         <View>
-                            <Text style={Styles.stylePharmancyDetail.text}>Polis</Text>
+                            <Text style={Styles.stylePhoneNumbers.text}>Polis</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={Styles.stylePharmancyDetail.holder} onPress={() => Communications.phonecall('156', true)}>
+                    <TouchableOpacity style={Styles.stylePhoneNumbers.holder} onPress={() => Communications.phonecall('156', true)}>
                         <View>
-                            <Text style={Styles.stylePharmancyDetail.text}>Jandarma</Text>
+                            <Text style={Styles.stylePhoneNumbers.text}>Jandarma</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={Styles.stylePharmancyDetail.holder} onPress={() => Communications.phonecall('185', true)}>
+                    <TouchableOpacity style={Styles.stylePhoneNumbers.holder} onPress={() => Communications.phonecall('185', true)}>
                         <View>
-                            <Text style={Styles.stylePharmancyDetail.text}>Su Arıza</Text>
+                            <Text style={Styles.stylePhoneNumbers.text}>Su Arıza</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={Styles.stylePharmancyDetail.holder} onPress={() => Communications.phonecall('186', true)}>
+                    <TouchableOpacity style={Styles.stylePhoneNumbers.holder} onPress={() => Communications.phonecall('186', true)}>
                         <View>
-                            <Text style={Styles.stylePharmancyDetail.text}>Elektrik Arıza</Text>
+                            <Text style={Styles.stylePhoneNumbers.text}>Elektrik Arıza</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={Styles.stylePharmancyDetail.holder} onPress={() => Communications.phonecall('187', true)}>
+                    <TouchableOpacity style={Styles.stylePhoneNumbers.holder} onPress={() => Communications.phonecall('187', true)}>
                         <View>
-                            <Text style={Styles.stylePharmancyDetail.text}>Gaz Arıza</Text>
+                            <Text style={Styles.stylePhoneNumbers.text}>Gaz Arıza</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
