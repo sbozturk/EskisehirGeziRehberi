@@ -7,6 +7,9 @@ class Constant {
     static REQUEST_URL_SIYASET = 'https://esgazete-api.herokuapp.com/esgazete/politics';
     static REQUEST_URL_SPOR = 'https://esgazete-api.herokuapp.com/esgazete/sport';
     static REQUEST_URL_TEKNOLOJI = 'https://esgazete-api.herokuapp.com/esgazete/technology';
+
+    static REQUEST_URL_ODUNPAZARI = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
+    static REQUEST_URL_TEPEBASI = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
 }
 
 export default Constant;
