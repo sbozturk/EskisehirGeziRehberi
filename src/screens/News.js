@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    TouchableOpacity,
-    Image
-} from 'react-native';
+import {Text, View, TouchableOpacity, Image} from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import Dunya from './news/Dunya';
 import Eglence from './news/Eglence';
@@ -15,6 +9,7 @@ import Magazin from './news/Magazin';
 import Siyaset from './news/Siyaset';
 import Spor from './news/Spor';
 import Teknoloji from './news/Teknoloji';
+import Styles from "../util/Styles";
 
 class News extends React.Component {
     static navigationOptions = {
@@ -29,73 +24,68 @@ class News extends React.Component {
                 style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
                 source={require('../assets/background.png')}
             >
-                <View style={rowStyle.container}>
-                    <View style={columnStyle.container}>
+                <View style={Styles.styleNews.containerRow}>
+                    <View style={Styles.styleNews.containerColumn}>
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Gundem')}
                         >
-                            <Text style={buttonStyle.buttonText}>Gündem</Text>
+                            <Text style={Styles.styleNews.buttonText}>Gündem</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Spor')}
                         >
-                            <Text style={buttonStyle.buttonText}>Spor</Text>
+                            <Text style={Styles.styleNews.buttonText}>Spor</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Magazin')}
                         >
-                            <Text style={buttonStyle.buttonText}>Magazin</Text>
+                            <Text style={Styles.styleNews.buttonText}>Magazin</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Ekonomi')}
                         >
-                            <Text style={buttonStyle.buttonText}>Ekonomi</Text>
+                            <Text style={Styles.styleNews.buttonText}>Ekonomi</Text>
                         </TouchableOpacity>
                     </View>
 
-                    <View style={columnStyle.container}>
+                    <View style={Styles.styleNews.containerColumn}>
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Siyaset')}
                         >
-                            <Text style={buttonStyle.buttonText}>Siyaset</Text>
+                            <Text style={Styles.styleNews.buttonText}>Siyaset</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Teknoloji')}
                         >
-                            <Text style={buttonStyle.buttonText}>Teknoloji</Text>
+                            <Text style={Styles.styleNews.buttonText}>Teknoloji</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Eglence')}
                         >
-                            <Text style={buttonStyle.buttonText}>Eğlence</Text>
+                            <Text style={Styles.styleNews.buttonText}>Eğlence</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={buttonStyle.buttonNews}
+                            style={Styles.styleNews.buttonNews}
                             onPress={() => navigate('Dunya')}
                         >
-                            <Text style={buttonStyle.buttonText}>Dünya</Text>
+                            <Text style={Styles.styleNews.buttonText}>Dünya</Text>
                         </TouchableOpacity>
                     </View>
-
                 </View>
-
             </Image>
-
-
-
         );
     }
 }
@@ -115,42 +105,5 @@ const App = StackNavigator({
         headerMode: 'none',
     }
 );
-
-const rowStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-});
-
-const columnStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-
-    },
-});
-
-const buttonStyle = StyleSheet.create({
-
-    buttonNews: {
-        height: '25%',
-        width: '100%',
-        backgroundColor: 'transparent',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderColor: '#fff',
-        borderWidth: 2,
-    },
-
-    buttonText: {
-        textAlign: 'center',
-        fontSize: 32,
-        color: '#fff',
-    },
-});
-
 
 export default App;
