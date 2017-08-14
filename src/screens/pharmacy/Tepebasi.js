@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View, Image} from 'react-native';
 import Communications from 'react-native-communications';
-
-const REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
+import Constant from "../../util/Constant";
+import Styles from "../../util/Styles";
 
 class Tepebasi extends Component {
     static navigationOptions = {
@@ -24,7 +24,7 @@ class Tepebasi extends Component {
     }
 
     fetchData() {
-        fetch(REQUEST_URL)
+        fetch(Constant.REQUEST_URL_TEPEBASI)
             .then((response) => response.json())
             .then((responseData) => {
                 this.setState({
@@ -67,7 +67,7 @@ class Tepebasi extends Component {
                 }}
             >
                 <ActivityIndicator
-                style={[tepebasiStyle.centering, {height: 80}]}
+                style={[Styles.stylePharmancyDetail.centering, {height: 80}]}
                 size="large"
                 color='white'/>
             </View>
@@ -77,13 +77,13 @@ class Tepebasi extends Component {
 
     renderPharmancy(pharmancy) {
         return (
-            <View style={tepebasiStyle.container}>
+            <View style={Styles.stylePharmancyDetail.container}>
                 <TouchableOpacity onPress={() => Communications.web('https://www.google.com.tr/maps/place/' + pharmancy.address)}>
-                    <Text style={tepebasiStyle.title}>{pharmancy.name}</Text>
-                    <Text style={tepebasiStyle.text}>{pharmancy.address}</Text>
+                    <Text style={Styles.stylePharmancyDetail.title}>{pharmancy.name}</Text>
+                    <Text style={Styles.stylePharmancyDetail.text}>{pharmancy.address}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
-                    <Text style={tepebasiStyle.textTelephone}>{pharmancy.telephone}</Text>
+                    <Text style={Styles.stylePharmancyDetail.textTelephone}>{pharmancy.telephone}</Text>
                 </TouchableOpacity>
             </View>
         );

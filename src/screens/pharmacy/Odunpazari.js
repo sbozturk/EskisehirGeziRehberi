@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {TouchableOpacity, ActivityIndicator, StyleSheet, ListView, Text, View, Image} from 'react-native';
 import Communications from 'react-native-communications';
-
-var REQUEST_URL = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetciodunpazari';
+import Constant from "../../util/Constant";
+import Styles from "../../util/Styles";
 
 class Odunpazari extends Component {
     static navigationOptions = {
@@ -24,7 +24,7 @@ class Odunpazari extends Component {
     }
 
     fetchData() {
-        fetch(REQUEST_URL)
+        fetch(Constant.REQUEST_URL_ODUNPAZARI)
             .then((response) => response.json())
             .then((responseData) => {
                 this.setState({
@@ -67,7 +67,7 @@ class Odunpazari extends Component {
                 }}
             >
                 <ActivityIndicator
-                style={[odunpazariStyle.centering, {height: 80}]}
+                style={[Styles.stylePharmancyDetail.centering, {height: 80}]}
                 size="large"
                 color='white'/>
             </View>
@@ -77,59 +77,18 @@ class Odunpazari extends Component {
 
     renderPharmancy(pharmancy) {
         return (
-            <View style={odunpazariStyle.container}>
+            <View style={Styles.stylePharmancyDetail.container}>
                 <TouchableOpacity onPress={() => Communications.web('https://www.google.com.tr/maps/place/' + pharmancy.address)}>
-                    <Text style={odunpazariStyle.title}>{pharmancy.name}</Text>
-                    <Text style={odunpazariStyle.text}>{pharmancy.address}</Text>
+                    <Text style={Styles.stylePharmancyDetail.title}>{pharmancy.name}</Text>
+                    <Text style={Styles.stylePharmancyDetail.text}>{pharmancy.address}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => Communications.phonecall(pharmancy.telephone, true)}>
-                    <Text style={odunpazariStyle.textTelephone}>{pharmancy.telephone}</Text>
+                    <Text style={Styles.stylePharmancyDetail.textTelephone}>{pharmancy.telephone}</Text>
                 </TouchableOpacity>
             </View>
         );
     }
 }
-
-var odunpazariStyle = StyleSheet.create({
-  container: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      flex: 1,
-      backgroundColor: '#fff',
-      borderColor: '#fff',
-      borderWidth: 2,
-      marginTop: 10,
-      marginLeft: 20,
-      marginRight: 20
-  },
-
-  title: {
-      fontSize: 16,
-      marginBottom: 8,
-      marginTop: 10,
-      marginRight: 10,
-      marginLeft: 10,
-      fontWeight: 'bold',
-  },
-
-  text: {
-      marginRight: 10,
-      marginLeft: 10,
-  },
-
-  textTelephone: {
-    marginRight: 10,
-    marginLeft: 10,
-    marginTop: 10,
-    marginBottom: 10
-  },
-
-  centering: {
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: 8,
-  },
-});
 
 console.disableYellowBox = true;
 export default Odunpazari;
