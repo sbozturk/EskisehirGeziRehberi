@@ -12,7 +12,7 @@ const InternetAlert = () => {
             [
                 {text: 'TAMAM', onPress: () => console.log('OK Pressed')},
             ],
-            { cancelable: false }
+            {cancelable: false}
         )
     };
     return (
@@ -82,7 +82,7 @@ class Ekonomi extends Component {
     static renderLoadingView() {
         return (
             <Image
-                style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
                 source={require('../../assets/background.png')}
             >
                 <View

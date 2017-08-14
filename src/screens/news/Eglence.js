@@ -12,7 +12,7 @@ const InternetAlert = () => {
             [
                 {text: 'TAMAM', onPress: () => console.log('OK Pressed')},
             ],
-            { cancelable: false }
+            {cancelable: false}
         )
     };
     return (
@@ -63,7 +63,7 @@ class Eglence extends Component {
 
     render() {
         if (!this.state.internetConnection) {
-            return  InternetAlert();
+            return InternetAlert();
         } else {
             if (!this.state.loaded) {
                 return Eglence.renderLoadingView();
@@ -82,7 +82,7 @@ class Eglence extends Component {
     static renderLoadingView() {
         return (
             <Image
-                style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
                 source={require('../../assets/background.png')}
             >
                 <View

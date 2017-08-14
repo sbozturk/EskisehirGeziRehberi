@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { WebView } from 'react-native';
+import {WebView} from 'react-native';
 
 class Travel extends Component {
     static navigationOptions = {

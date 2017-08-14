@@ -20,29 +20,29 @@ class Pharmacy extends React.Component {
 
         return (
 
-          <Image
-            style={{flex:1, resizeMode: 'stretch', width: '100%'}}
-            source={require('../assets/background.png')}
-          >
+            <Image
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
+                source={require('../assets/background.png')}
+            >
 
                 <View style={columnStyle.container}>
 
-                <TouchableOpacity
-                    style={buttonStyle.button}
-                    onPress={() => navigate('Tepebasi')}
-                >
-                    <Text style={buttonStyle.buttonText}>Tepebaşı</Text>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        style={buttonStyle.button}
+                        onPress={() => navigate('Tepebasi')}
+                    >
+                        <Text style={buttonStyle.buttonText}>Tepebaşı</Text>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    style={buttonStyle.button}
-                    onPress={() => navigate('Odunpazari')}
-                >
-                    <Text style={buttonStyle.buttonText}>Odunpazarı</Text>
-                </TouchableOpacity>
-            </View>
+                    <TouchableOpacity
+                        style={buttonStyle.button}
+                        onPress={() => navigate('Odunpazari')}
+                    >
+                        <Text style={buttonStyle.buttonText}>Odunpazarı</Text>
+                    </TouchableOpacity>
+                </View>
 
-          </Image>
+            </Image>
         );
     }
 }

@@ -41,44 +41,45 @@ class Tepebasi extends Component {
         }
 
         return (
-          <Image
-          style={{flex:1, resizeMode: 'stretch', width: '100%'}}
-          source={require('../../assets/background.png')}
-          >
-            <ListView
-                dataSource={this.state.dataSource}
-                renderRow={this.renderPharmancy}
-            />
-          </Image>
+            <Image
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
+                source={require('../../assets/background.png')}
+            >
+                <ListView
+                    dataSource={this.state.dataSource}
+                    renderRow={this.renderPharmancy}
+                />
+            </Image>
         );
     }
 
     static renderLoadingView() {
         return (
-          <Image
-          style={{flex:1, resizeMode: 'stretch', width: '100%'}}
-          source={require('../../assets/background.png')}
-          >
-            <View
-                style={{
-                    paddingTop: 10,
-                    flex: 1,
-                    backgroundColor: 'transparent',
-                }}
+            <Image
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
+                source={require('../../assets/background.png')}
             >
-                <ActivityIndicator
-                style={[Styles.stylePharmancyDetail.centering, {height: 80}]}
-                size="large"
-                color='white'/>
-            </View>
-          </Image>
+                <View
+                    style={{
+                        paddingTop: 10,
+                        flex: 1,
+                        backgroundColor: 'transparent',
+                    }}
+                >
+                    <ActivityIndicator
+                        style={[Styles.stylePharmancyDetail.centering, {height: 80}]}
+                        size="large"
+                        color='white'/>
+                </View>
+            </Image>
         );
     }
 
     renderPharmancy(pharmancy) {
         return (
             <View style={Styles.stylePharmancyDetail.container}>
-                <TouchableOpacity onPress={() => Communications.web('https://www.google.com.tr/maps/place/' + pharmancy.address)}>
+                <TouchableOpacity
+                    onPress={() => Communications.web('https://www.google.com.tr/maps/place/' + pharmancy.address)}>
                     <Text style={Styles.stylePharmancyDetail.title}>{pharmancy.name}</Text>
                     <Text style={Styles.stylePharmancyDetail.text}>{pharmancy.address}</Text>
                 </TouchableOpacity>
@@ -118,16 +119,16 @@ const tepebasiStyle = StyleSheet.create({
     },
 
     textTelephone: {
-      marginRight: 10,
-      marginLeft: 10,
-      marginTop: 10,
-      marginBottom: 10
+        marginRight: 10,
+        marginLeft: 10,
+        marginTop: 10,
+        marginBottom: 10
     },
 
     centering: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 8,
     },
 });
 

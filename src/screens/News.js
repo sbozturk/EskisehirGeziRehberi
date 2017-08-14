@@ -20,78 +20,79 @@ class News extends React.Component {
     static navigationOptions = {
         title: 'Haberler',
     };
+
     render() {
         const {navigate} = this.props.navigation;
 
         return (
-          <Image
-            style={{flex:1, resizeMode: 'stretch', width: '100%'}}
-            source={require('../assets/background.png')}
-          >
+            <Image
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
+                source={require('../assets/background.png')}
+            >
                 <View style={rowStyle.container}>
-                <View style={columnStyle.container}>
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Gundem')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Gündem</Text>
-                    </TouchableOpacity>
+                    <View style={columnStyle.container}>
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Gundem')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Gündem</Text>
+                        </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Spor')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Spor</Text>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Spor')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Spor</Text>
+                        </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Magazin')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Magazin</Text>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Magazin')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Magazin</Text>
+                        </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Ekonomi')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Ekonomi</Text>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Ekonomi')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Ekonomi</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={columnStyle.container}>
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Siyaset')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Siyaset</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Teknoloji')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Teknoloji</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Eglence')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Eğlence</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={buttonStyle.buttonNews}
+                            onPress={() => navigate('Dunya')}
+                        >
+                            <Text style={buttonStyle.buttonText}>Dünya</Text>
+                        </TouchableOpacity>
+                    </View>
+
                 </View>
 
-                <View style={columnStyle.container}>
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Siyaset')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Siyaset</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Teknoloji')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Teknoloji</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Eglence')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Eğlence</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={buttonStyle.buttonNews}
-                        onPress={() => navigate('Dunya')}
-                    >
-                        <Text style={buttonStyle.buttonText}>Dünya</Text>
-                    </TouchableOpacity>
-                </View>
-
-            </View>
-
-          </Image>
+            </Image>
 
 
 

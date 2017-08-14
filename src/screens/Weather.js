@@ -95,8 +95,8 @@ class Weather extends Component {
                     hideChevron
                 />
                 <Image
-                  style={{flex:1, resizeMode: 'stretch', width: '100%'}}
-                  source={require('../assets/eskisehir.png')}
+                    style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
+                    source={require('../assets/eskisehir.png')}
                 />
             </View>
         );
