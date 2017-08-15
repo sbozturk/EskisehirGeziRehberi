@@ -32,17 +32,30 @@ class Styles {
 
     static styleNewsDetail = StyleSheet.create({
         container: {
+            alignItems: 'center',
+            justifyContent: 'center',
             flex: 1,
-            marginBottom: 50,
+        },
+        card: {
+            flex: 1,
+            marginTop:20,
+            marginBottom: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'white',
+            width: '90%'
         },
         title: {
-            fontSize: 20,
-            marginBottom: 8,
+            fontSize: 16,
+            marginBottom: 5,
             textAlign: 'center',
             fontWeight: 'bold',
+            backgroundColor: 'white',
+            width: '90%',
         },
         thumbnail: {
-            width: '100%',
+            marginTop: 10,
+            width: '95%',
             height: 150,
         },
         centering: {
