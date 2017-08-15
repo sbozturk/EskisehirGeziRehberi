@@ -12,7 +12,7 @@ const InternetAlert = () => {
             [
                 {text: 'TAMAM', onPress: () => console.log('OK Pressed')},
             ],
-            { cancelable: false }
+            {cancelable: false}
         )
     };
     return (
@@ -64,18 +64,23 @@ class Dunya extends Component {
 
     render() {
         if (!this.state.internetConnection) {
-            return  InternetAlert();
+            return InternetAlert();
         } else {
             if (!this.state.loaded) {
                 return Dunya.renderLoadingView();
             }
 
             return (
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={this.renderNews}
-                    style={Styles.styleNewsDetail.listView}
-                />
+                <Image
+                    style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
+                    source={require('../../assets/background.png')}
+                >
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={this.renderNews}
+                        style={Styles.styleNewsDetail.listView}
+                    />
+                </Image>
             );
         }
     }
@@ -83,7 +88,7 @@ class Dunya extends Component {
     static renderLoadingView() {
         return (
             <Image
-                style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
                 source={require('../../assets/background.png')}
             >
                 <View
@@ -106,11 +111,13 @@ class Dunya extends Component {
         return (
             <TouchableOpacity onPress={() => Communications.web(news.url)}>
                 <View style={Styles.styleNewsDetail.container}>
-                    <Image
-                        source={{uri: news.picUrl}}
-                        style={Styles.styleNewsDetail.thumbnail}
-                    />
-                    <Text style={Styles.styleNewsDetail.title}>{news.title}</Text>
+                    <View style={Styles.styleNewsDetail.card}>
+                        <Image
+                            source={{uri: news.picUrl}}
+                            style={Styles.styleNewsDetail.thumbnail}
+                        />
+                        <Text style={Styles.styleNewsDetail.title}>{news.title}</Text>
+                    </View>
                 </View>
             </TouchableOpacity>
         );
