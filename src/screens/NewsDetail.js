@@ -3,6 +3,30 @@ import {Alert, ActivityIndicator, ListView, Text, View, Image, TouchableOpacity}
 import Communications from 'react-native-communications';
 import Styles from "../util/Styles";
 
+const InternetAlert = () => {
+    const showAlert = () => {
+        Alert.alert(
+            'Bağlantı Hatası',
+            'Bağlantı sırasında bir hata ile karşılaşıldı.',
+            [
+                {text: 'TAMAM', onPress: () => console.log('OK Pressed')},
+            ],
+            {cancelable: false}
+        )
+    };
+    return (
+        <View
+            style={{
+                paddingTop: 10,
+                flex: 1,
+                backgroundColor: 'white',
+            }}
+        >
+            {showAlert()}
+        </View>
+    );
+};
+
 class NewsDetail extends Component {
     static navigationOptions = ({navigation}) => ({
         title: navigation.state.params.title,
@@ -15,7 +39,7 @@ class NewsDetail extends Component {
             dataSource: new ListView.DataSource({
                 rowHasChanged: (row1, row2, row3) => row1 !== row2 !== row3,
             }),
-            loaded: false,
+            isLoading: true,
         }
     }
 
@@ -30,7 +54,7 @@ class NewsDetail extends Component {
             .then((responseData) => {
                 this.setState({
                     dataSource: this.state.dataSource.cloneWithRows(responseData),
-                    loaded: true,
+                    isLoading: false,
                 });
             }).catch(error => {
             this.setState({internetConnection: false});
@@ -41,7 +65,7 @@ class NewsDetail extends Component {
         if (!this.state.internetConnection) {
             return InternetAlert();
         } else {
-            if (!this.state.loaded) {
+            if (this.state.isLoading) {
                 return NewsDetail.renderLoadingView();
             }
 

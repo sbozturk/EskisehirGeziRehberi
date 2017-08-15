@@ -1,7 +1,32 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, View, Image} from 'react-native';
+import {Alert, ActivityIndicator, View, Image} from 'react-native';
 import {ListItem} from 'react-native-elements';
+import Constant from "../util/Constant";
 import Styles from "../util/Styles";
+
+const InternetAlert = () => {
+    const showAlert = () => {
+        Alert.alert(
+            'Bağlantı Hatası',
+            'Bağlantı sırasında bir hata ile karşılaşıldı.',
+            [
+                {text: 'TAMAM', onPress: () => console.log('OK Pressed')},
+            ],
+            {cancelable: false}
+        )
+    };
+    return (
+        <View
+            style={{
+                paddingTop: 10,
+                flex: 1,
+                backgroundColor: 'white',
+            }}
+        >
+            {showAlert()}
+        </View>
+    );
+};
 
 class Weather extends Component {
     static navigationOptions = {
@@ -11,6 +36,7 @@ class Weather extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            internetConnection: true,
             isLoading: true,
         };
     }
@@ -18,9 +44,7 @@ class Weather extends Component {
     componentDidMount() {
         this.setState({isLoading: true});
 
-        fetch(
-            `https://api.openweathermap.org/data/2.5/find?q=Eskisehir&units=metric&appid=ea2b8fad5846f2a27f48d270819041e7`
-        )
+        fetch(Constant.REQUEST_URL_WEATHER)
             .then(res => res.json())
             .then(responseData => {
                 this.setState({
@@ -38,53 +62,58 @@ class Weather extends Component {
                         icon: 'https://openweathermap.org/img/w/' + responseData.list[0].weather[0].icon + '.png',
                     },
                 });
-            });
+            }).catch(error => {
+            this.setState({internetConnection: false});
+        })
     }
 
     render() {
-        if (this.state.isLoading) {
-            return <LoadingIndicator/>;
+        if (!this.state.internetConnection) {
+            return InternetAlert();
+        } else {
+            if (this.state.isLoading) {
+                return <LoadingIndicator/>;
+            }
+            return (
+                <View style={{flex: 1, backgroundColor: 'white'}}>
+                    <ListItem
+                        title={this.state.city.weather}
+                        avatar={{uri: this.state.city.icon}}
+                        badge={{
+                            value: this.state.city.temp + ' °C',
+                            badgeContainerStyle: {
+                                backgroundColor: 'lightblue',
+                            },
+                        }}
+                        hideChevron
+                    />
+                    <ListItem
+                        title="Nem"
+                        rightTitle={'%' + this.state.city.humidity}
+                        hideChevron
+                    />
+                    <ListItem
+                        title="Basınç"
+                        rightTitle={this.state.city.pressure + ' hPa'}
+                        hideChevron
+                    />
+                    <ListItem
+                        title="Rüzgar Hızı"
+                        rightTitle={this.state.city.wind_speed + ' m/s'}
+                        hideChevron
+                    />
+                    <ListItem
+                        title="Bulut Örtüsü"
+                        rightTitle={'%' + this.state.city.cloudiness}
+                        hideChevron
+                    />
+                    <Image
+                        style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
+                        source={require('../assets/eskisehir.png')}
+                    />
+                </View>
+            );
         }
-
-        return (
-            <View style={{flex: 1, backgroundColor: 'white'}}>
-                <ListItem
-                    title={this.state.city.weather}
-                    avatar={{uri: this.state.city.icon}}
-                    badge={{
-                        value: this.state.city.temp + ' °C',
-                        badgeContainerStyle: {
-                            backgroundColor: 'lightblue',
-                        },
-                    }}
-                    hideChevron
-                />
-                <ListItem
-                    title="Nem"
-                    rightTitle={'%' + this.state.city.humidity}
-                    hideChevron
-                />
-                <ListItem
-                    title="Basınç"
-                    rightTitle={this.state.city.pressure + ' hPa'}
-                    hideChevron
-                />
-                <ListItem
-                    title="Rüzgar Hızı"
-                    rightTitle={this.state.city.wind_speed + ' m/s'}
-                    hideChevron
-                />
-                <ListItem
-                    title="Bulut Örtüsü"
-                    rightTitle={'%' + this.state.city.cloudiness}
-                    hideChevron
-                />
-                <Image
-                    style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
-                    source={require('../assets/eskisehir.png')}
-                />
-            </View>
-        );
     }
 }
 
