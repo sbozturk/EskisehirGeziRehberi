@@ -21,14 +21,20 @@ class Pharmacy extends React.Component {
                 <View style={Styles.stylePharmancy.containerColumn}>
                     <TouchableOpacity
                         style={Styles.stylePharmancy.button}
-                        onPress={() => navigate('PharmacyDetail', {title: 'Tepebaşı', REQUEST_URL: Constant.REQUEST_URL_TEPEBASI})}
+                        onPress={() => navigate('PharmacyDetail', {
+                            title: 'Tepebaşı',
+                            REQUEST_URL: Constant.REQUEST_URL_TEPEBASI
+                        })}
                     >
                         <Text style={Styles.stylePharmancy.buttonText}>Tepebaşı</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={Styles.stylePharmancy.button}
-                        onPress={() => navigate('PharmacyDetail', {title: 'Odunpazarı', REQUEST_URL: Constant.REQUEST_URL_ODUNPAZARI})}
+                        onPress={() => navigate('PharmacyDetail', {
+                            title: 'Odunpazarı',
+                            REQUEST_URL: Constant.REQUEST_URL_ODUNPAZARI
+                        })}
                     >
                         <Text style={Styles.stylePharmancy.buttonText}>Odunpazarı</Text>
                     </TouchableOpacity>

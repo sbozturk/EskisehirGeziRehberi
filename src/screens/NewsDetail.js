@@ -3,31 +3,6 @@ import {Alert, ActivityIndicator, ListView, Text, View, Image, TouchableOpacity}
 import Communications from 'react-native-communications';
 import Styles from "../util/Styles";
 
-const InternetAlert = () => {
-    const showAlert = () => {
-        Alert.alert(
-            'Bağlantı Hatası',
-            'Bağlantı sırasında bir hata ile karşılaşıldı.',
-            [
-                {text: 'TAMAM', onPress: () => console.log('OK Pressed')},
-            ],
-            {cancelable: false}
-        )
-    };
-    return (
-        <View
-            style={{
-                paddingTop: 10,
-                flex: 1,
-                backgroundColor: 'white',
-            }}
-        >
-            {showAlert()}
-        </View>
-    );
-};
-
-
 class NewsDetail extends Component {
     static navigationOptions = ({navigation}) => ({
         title: navigation.state.params.title,
@@ -49,7 +24,7 @@ class NewsDetail extends Component {
     }
 
     fetchData() {
-        const { params } = this.props.navigation.state;
+        const {params} = this.props.navigation.state;
         fetch(params.REQUEST_URL)
             .then((response) => response.json())
             .then((responseData) => {

@@ -92,7 +92,7 @@ class LoadingIndicator extends Component {
     render() {
         return (
             <Image
-                style={{flex:1, resizeMode: 'stretch', width: '100%'}}
+                style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
                 source={require('../assets/background.png')}
             >
                 <View

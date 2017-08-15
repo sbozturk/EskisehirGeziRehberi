@@ -24,7 +24,7 @@ class PharmancyDetail extends Component {
     }
 
     fetchData() {
-        const { params } = this.props.navigation.state;
+        const {params} = this.props.navigation.state;
         fetch(params.REQUEST_URL)
             .then((response) => response.json())
             .then((responseData) => {
