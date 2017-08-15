@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, Image} from 'react-native';
 import {StackNavigator} from 'react-navigation';
-import Odunpazari from './pharmacy/Odunpazari';
-import Tepebasi from './pharmacy/Tepebasi';
+import PharmancyDetail from './PharmancyDetail';
+import Constant from "../util/Constant";
 import Styles from "../util/Styles";
 
 class Pharmacy extends React.Component {
@@ -18,24 +18,21 @@ class Pharmacy extends React.Component {
                 style={{flex: 1, resizeMode: 'stretch', width: '100%'}}
                 source={require('../assets/background.png')}
             >
-
                 <View style={Styles.stylePharmancy.containerColumn}>
-
                     <TouchableOpacity
                         style={Styles.stylePharmancy.button}
-                        onPress={() => navigate('Tepebasi')}
+                        onPress={() => navigate('PharmacyDetail', {title: 'Tepebaşı', REQUEST_URL: Constant.REQUEST_URL_TEPEBASI})}
                     >
                         <Text style={Styles.stylePharmancy.buttonText}>Tepebaşı</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={Styles.stylePharmancy.button}
-                        onPress={() => navigate('Odunpazari')}
+                        onPress={() => navigate('PharmacyDetail', {title: 'Odunpazarı', REQUEST_URL: Constant.REQUEST_URL_ODUNPAZARI})}
                     >
                         <Text style={Styles.stylePharmancy.buttonText}>Odunpazarı</Text>
                     </TouchableOpacity>
                 </View>
-
             </Image>
         );
     }
@@ -43,8 +40,7 @@ class Pharmacy extends React.Component {
 
 const App = StackNavigator({
         Pharmacy: {screen: Pharmacy},
-        Odunpazari: {screen: Odunpazari},
-        Tepebasi: {screen: Tepebasi},
+        PharmacyDetail: {screen: PharmancyDetail},
     },
     {
         headerMode: 'none',
