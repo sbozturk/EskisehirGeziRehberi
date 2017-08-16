@@ -190,6 +190,48 @@ class Styles {
         },
     });
 
+    static styleTravel = StyleSheet.create({
+      container: {
+          alignItems: 'center',
+          justifyContent: 'center',
+          flex: 1,
+      },
+      card: {
+          flex: 1,
+          marginTop:20,
+          marginBottom: 10,
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'white',
+          width: '90%'
+      },
+      title: {
+          fontSize: 16,
+          marginBottom: 5,
+          textAlign: 'center',
+          fontWeight: 'bold',
+          backgroundColor: 'white',
+          width: '90%',
+      },
+      number: {
+          fontSize: 16,
+          marginBottom: 5,
+          textAlign: 'center',
+          backgroundColor: 'white',
+          width: '90%',
+      },
+      thumbnail: {
+          marginTop: 10,
+          width: '95%',
+          height: 150,
+      },
+      centering: {
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 8,
+      },
+    });
+
     static styleWeather = StyleSheet.create({
         centering: {
             alignItems: 'center',
