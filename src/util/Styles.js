@@ -42,7 +42,7 @@ class Styles {
             marginBottom: 10,
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: 'white',
+            backgroundColor: 'rgba(255, 255, 255, 0.3)',
             width: '90%'
         },
         title: {
@@ -50,7 +50,6 @@ class Styles {
             marginBottom: 5,
             textAlign: 'center',
             fontWeight: 'bold',
-            backgroundColor: 'white',
             width: '90%',
         },
         thumbnail: {
@@ -93,9 +92,7 @@ class Styles {
             alignItems: 'center',
             justifyContent: 'center',
             flex: 1,
-            backgroundColor: '#fff',
-            borderColor: '#fff',
-            borderWidth: 2,
+            backgroundColor: 'rgba(255, 255, 255, 0.3)',
             marginTop: 10,
             marginLeft: 20,
             marginRight: 20
