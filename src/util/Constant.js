@@ -12,6 +12,9 @@ class Constant {
     static REQUEST_URL_TEPEBASI = 'https://eskisehir-nobetci-eczaneler.herokuapp.com/nobetcitepebasi';
 
     static REQUEST_URL_WEATHER = 'https://api.openweathermap.org/data/2.5/find?q=Eskisehir&units=metric&appid=ea2b8fad5846f2a27f48d270819041e7';
+
+    static REQUEST_URL_TRAVEL = 'https://eskisehir-trip-api.herokuapp.com/eskisehirtrip';
+    static REQUEST_URL_TRAVEL_DETAIL = 'https://eskisehir-trip-api.herokuapp.com/eskisehirtripdetail?url=';
 }
 
 export default Constant;
